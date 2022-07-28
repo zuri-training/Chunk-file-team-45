@@ -8,7 +8,7 @@ from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 
-def registerUser(request):
+def register_view(request):
 
     if request.method == 'Post':
         form = UserCreationForm(request.Post)
@@ -21,15 +21,15 @@ def registerUser(request):
 
         login(request, User)
         messages.success(request, 'Registration Successful')
-        return redirect('home')
+        return redirect('home.html')
 
     else:
         form = UserCreationForm()
 
-    return render(request, 'authenticate/register.html', {form: forms})
+    return render(request, 'register.html', {form: forms})
 
 
-def loginUser(request):
+def login_view(request):
 
     if request.method == 'Post':
         email = request.Post['email']
@@ -44,13 +44,13 @@ def loginUser(request):
             return redirect('login.html')
 
     else:
-        return render(request, 'authenticate/login.html')
+        return render(request, 'login.html')
 
 
-def logoutUser(request):
+def logout_view(request):
     logout(request)
     messages.success(request, 'You logged out' )
-    return redirect('home')
+    return redirect('main.html')
 
 def home(request):
-    return render (request, 'user/home.html')
+    return render (request, 'home.html')
