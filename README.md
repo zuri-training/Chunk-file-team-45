@@ -23,3 +23,5 @@ The user authentication is done with with Django inbuilt auth system  and the fi
 
 
 ## DOCUMENTATIONS
+- Figma Board
+https://www.figma.com/file/u1asikejW1s1pF9NU51pPd/FIGMA---Chunk-file%2FTEAM-45?node-id=480%3A339
