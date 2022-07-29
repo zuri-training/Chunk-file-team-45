@@ -22,4 +22,4 @@ HTML, CSS and Javascript are used to design the frontend while we deploy Python 
 The user authentication is done with with Django inbuilt auth system  and the file splitting is done with python.
 
 
-#DOCUMENTATIONS
+## DOCUMENTATIONS
