@@ -20,3 +20,6 @@ user can perform all the actions allowed on the platform.
 
 HTML, CSS and Javascript are used to design the frontend while we deploy Python and it's Django framework for the Backend
 The user authentication is done with with Django inbuilt auth system  and the file splitting is done with python.
+
+
+#DOCUMENTATIONS
