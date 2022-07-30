@@ -26,7 +26,7 @@ def register_view(request):
     else:
         form = UserCreationForm()
 
-    return render(request, 'register.html', {form: forms})
+    return render(request, 'registration.html', {form: forms})
 
 
 def login_view(request):
@@ -50,7 +50,7 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     messages.success(request, 'You logged out' )
-    return redirect('main.html')
+    return redirect('index.html')
 
 def home(request):
     return render (request, 'home.html')
