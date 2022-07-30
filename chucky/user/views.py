@@ -1,9 +1,10 @@
-import email
+
 from django.shortcuts import render, redirect
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+
 
 
 # Create your views here.
@@ -15,9 +16,19 @@ def register_view(request):
         if form.is_valid():
             User = form.save()
 
-        email = form.cleaned_data['email']
-        password = form.cleaned_data['password']
-        User = authenticate(email=email, password=password)
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            password2 = form.cleaned_data['password2']
+            User = authenticate(username=username, password=password)
+        if password != password2:
+            messages.error(request, 'Password doesn\'t match')
+            return redirect('registration.html')
+        elif User.objects.filter(username=username.exists()):
+            messages.error(request, 'Username already exist')
+        else:
+            User = User.objects.get(username)
+            User.set_password(password)
+            User = form.save()
 
         login(request, User)
         messages.success(request, 'Registration Successful')
@@ -32,9 +43,9 @@ def register_view(request):
 def login_view(request):
 
     if request.method == 'Post':
-        email = request.Post['email']
+        username = request.Post['username']
         password = request.Post['password']
-        User = authenticate(request, email=email, password=password)
+        User = authenticate(request, username=username, password=password)
 
         if User is not None:
             login(request,User)
