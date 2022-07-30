@@ -304,10 +304,12 @@ input[placeholder="Enter your password"]{
     background-color: #F4F7FB;
     margin: 0 auto;
     width: 95%;
+    height: 510px;
     padding-left: 180px;
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 60px;
 }
+
 .option{
     width: 20px;
     height: 20px;
@@ -385,6 +387,8 @@ input[placeholder="Enter your password"]{
 
 .bottom{
         font-size: 12px;
+        position: relative;
+        bottom: 10px;
 }
 
 #last{
