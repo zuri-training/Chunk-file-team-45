@@ -1,0 +1,151 @@
+
+.form-body{
+    width: 100%;
+    height: 80vh;
+}
+.form-details{
+    margin: 0.625rem 1.875rem;
+    background-color: #F4F7FB;
+    border-radius: 1rem;;
+}
+.form-info{
+    padding:1.25rem 11.875rem;
+}
+.form-welcome-details{
+    margin-top: 1.25rem;
+}
+.form{
+    width: 80%;
+    margin-top: 1.875rem;
+}
+.form-welcome-details h3{
+    color:#034c95;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.form-welcome-details .create-account{
+    color: #616467;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.form-welcome-details .google-sign-up{
+    padding: 0.25rem 0.625rem;
+    color: #e82e5d;
+    border:1px solid #e82e5d;
+    border-radius: 0.625rem;
+    font-weight: 500;
+    font-size: 1.5rem ;
+}
+.Asterisks{
+    color: #e82e5d;
+}
+.form-label{
+    color: #1b1b1b;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.form-control{
+    color: #616467;
+    font-size: 1.25rem;
+}
+.form-check-label{
+    font-size: 1rem;
+}
+.having-an-account{
+    font-size: 1rem;
+}
+.form-condition{
+    color:#034c95;
+    font-weight: 500;
+}
+.btn{
+    padding: 0.3125rem 1.25rem;
+    background-color: #034c95;
+    font-size: 1.25rem;
+    color: #fff;
+}
+.btn:hover{
+    color: #034c95;
+    font-weight: 600;
+}
+
+
+/* SIGN UP MEDIA QUERY */
+@media (min-width:700px) and (max-width:1000px) {
+    .form{
+        width: 85%;
+
+    }
+    .form-welcome-details h3{
+        font-size: 1.5rem;
+    }
+    .form-welcome-details .create-account{
+        font-size: 1.20rem;
+    }
+    .form-welcome-details .google-sign-up{
+        font-size: 1rem ;
+    }
+    .form-label{
+        font-size: 1.25rem;
+    }
+    .form-check-label{
+        font-size: 0.75rem;
+    }
+    .form-control{
+        font-size: 1rem;
+    }
+   
+    .btn{
+        font-size: 1rem;
+       
+    }
+    
+}
+@media screen and (max-width:699px){
+.form-details{
+    margin:0.3125rem 3.75rem;
+
+}
+.form-info{
+    padding:0.3125rem 0.9375rem;
+}
+.form-welcome-details{
+    margin: 0.3125rem 3rem ;
+}
+.form{
+    width: 70%;
+    margin: 0.625rem 3rem ;
+}
+.form-welcome-details h3{
+    font-size: 1.5rem;
+}
+.form-welcome-details .create-account{
+   font-size: 1rem;
+}
+.form-welcome-details .google-sign-up{
+    padding: 0.125rem 0.3125rem;
+    font-size: 1rem;
+}
+
+.form-label{
+    font-size: 1rem;
+    
+}
+.form-control{
+    color: #616467;
+    font-size: 0.75rem;
+}
+
+.btn{
+    padding: 0.3125rem 2.5rem;
+    font-size: 1rem;
+}
+
+.having-an-account .form-check-label .form-text{
+    font-size: 0.75rem;
+}
+
+  
+}
+
+
