@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FDFDFE;
+
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    'A B B B'
+    'A C C F'
+    'A D D G'
+    'A D D I'
+    'A E E H'
+    ;
+    gap: 20px;
+    width:100%;
+    padding: 4%;
+}
+/* sidebar */
+.A{
+    background-color:#B1CAE3;
+    grid-area: A;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(1, 35, 69, 0.1);
+    height: 100%;
+    padding: 50px;
+    width: 330px;
+}
+.B{
+    background-color: #FDFDFE;
+    grid-area: B;
+    border-radius: 10px;
+}
+.C{
+    background-color:  #FAFCFE;
+    grid-area: C;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 120px;
+}
+.D{
+    background-color:  #FAFCFE;
+    grid-area: D;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding-left: 120px;
+    padding-top: 10px;
+}
+.E{
+    background-color:  #FAFCFE;
+    grid-area: E;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 20px;
+}
+.F{
+    background-color:  #FAFCFE;
+    grid-area: F;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(1, 35, 69, 0.2);
+    padding: 20px;
+}
+.G{
+    background-color:  #FAFCFE;
+    grid-area: G;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(1, 35, 69, 0.2);
+    padding: 10px;
+}
+.H{
+    background-color:  #FAFCFE;
+    grid-area: H;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(1, 35, 69, 0.2);
+    padding: 20px 30px;
+}
+.I{
+    grid-area: I;
+    padding: 10px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.icon{
+    height: 30px;
+}
+meter{
+    width:250px;
+    height: 50px;
+    color: #6B152B;
+    border-radius: 8px;
+    
+}
+.total{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+/* identical to box height */
+
+    text-align: center;
+    font-weight: 500;
+    color: #6B152B;
+}
+#sec-A{
+    list-style: none;
+    display: flex;
+    padding-bottom: 45px;
+}
+.sec-B{
+   padding-top: 50px;
+}
+.out{
+    color: red;
+}
+.arrow{
+    width: 50%;
+}
+a{
+    text-decoration: none;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+    color: #034C95;
+    font-size: 16px;
+}
+.dashboard{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: light;
+    color: #034C95;
+    font-size: 16px;
+    padding-top: 60px;
+}
+.details{
+   color: #034C95;
+   font-family: 'Clash Grotesk', sans-serif;
+   font-weight: 500;
+   padding-top: 40px;
+}
+.details :nth-child(2){
+    padding-top: 10px;
+}
+.list{
+    color: #034C95;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+    padding-top: 30px;
+}
+.signout{
+    color:#034C95;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+}
+.li{
+    height: 15px;
+}
+.li1{
+    height: 25px;
+}
+#text{
+    /* Hello, split those large files here */
+
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+
+   /* IOTA/Primary/primary-900 */
+
+    color: #012345;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    font-weight: lighter;
+}
+.search-files{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    color: #034C95;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 0px 14px 16px;
+    gap: 10px;
+    font-size: 18px;
+    width: 270px;
+    height: 56px;
+
+    /* Neutral/Neutral primary/White primary */
+
+    background: #FDFDFE;
+    /* IOTA/Primary/Main primary */
+
+    border: 1px solid #034C95;
+    border-radius: 8px;
+}
+#text,p{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+}
+.upload{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:150px;
+}
+#upload{
+    padding-top: 10px;
+}
+.choose{
+    padding-top: 10px;
+}
+#fieldset{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 50px;
+    border-radius: 8px;
+}
+#choose-file{
+    padding: 10px 0px;
+    text-align: center;
+    background-color:  #FAFCFE;
+    border: 1px solid #034C95;
+    color:#034C95;
+    border-radius: 8px;
+}
+.fieldset{
+    color:#6B152B;
+    flex-direction: row;
+    display: flex;
+}
+.customize{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:150px;
+}
+.custom{
+    padding-top: 10px;
+}
+#form{
+    padding-top: 10px;
+}
+.recent{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    gap:100px;
+}
+.seven{
+    padding-top: 10px;
+    font-size: small;
+}
+.l2{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.l3{
+    text-align: left;
+    width: 69%;
+}
+.when{
+    text-align: right;
+    width: 30%;
+}
+#view{
+    color: red;
+}
+.view{
+    display: flex;
+    margin-left: 25%;
+    margin-top: 25px;
+}
+.download{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    align-items: center;
+    gap: 60px;
+}
+#all{
+    color: red;
+}
+.download-button{
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+#download-button{
+    padding: 10px 30px;
+    color:  #FAFCFE;
+    border: 1px solid #034C95;
+    background-color:#034C95;
+    border-radius: 8px;
+}
+.files{
+    font-size: 13px;
+    padding-top: 25px;
+}
+.share{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    align-items: center;
+    gap: 90px;
+}
+.link{
+    padding-top: 40px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+#link{
+    color: #6B152B;
+    padding: 7px 10px;
+}
+#copy{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+}
+.soon{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    align-items: center;
+}
+.format{
+    font-size: small;
+    display: flex;
+    padding-top: 15px;
+    font-size: 13px;
+}
+ul{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    align-items: center;
+}
+.mail{
+    font-size: smaller;
+}
+#mail{
+    background-color: #E6EEF6;
+    border: 1px solid #E6EEF6;
+    padding: 10px;
+    color: #012345;
+}
+#submit{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    border: 1px solid red;
+    background-color: #FAFCFE;
+    color: red;
+    margin-top: 25px;
+    padding: 7px 50px;
+    border-radius: 30px;
+}
