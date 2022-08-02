@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="home.css"> 
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,700,400,600,300,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <main>           
+        <div class="A">
+            <section class="icon">
+                <img src="desktop logo.png">
+            </section>
+            <section class="dashboard">
+                <h2>DASHBOARD</h2>
+            </section>
+            <section class="details">
+                <p><b>Username:</b> Kanyisola</p>
+                <p><b>Email:</b> zuri@training.com</p>
+            </section>
+            <section class="list">
+                <ul>
+                    <li id="sec-A">
+                        <div class="sec-A">
+                    <img src="save-2.svg" class="li">
+                    <a href="#">Saved files</a>
+                    </div>
+                    </li>
+                    <li  id="sec-A">
+                        <div class="sec-A">
+                    <img src="document-download.svg" class="li">
+                    <a href="#">Downloads</a>
+                    </div>
+                    </li>
+                    <li  id="sec-A">
+                        <div class="sec-A">
+                    <img src="share.svg" class="li">
+                    <a href="#">Share</a>
+                    </div>
+                    </li>
+                    <li  id="sec-A">
+                        <div class="sec-A">
+                    <img src="setting-2.svg" class="li">
+                    <a href="#">Settings</a>
+                    </div>
+                    </li>
+                    <li  id="sec-A">
+                    <div class="sec-A">
+                    <img src="message-question.svg" class="li">
+                   <a href="#">Help centre</a>
+                    </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="meter">
+                <div class="total">
+                    <p>3 GB used out of 5 GB</p>
+                    <progress value="0.6">60%</progress>
+                </div>
+            </section>
+            <ul>
+                <li  id="sec-A">
+                    <div class="sec-B">
+            <img src="logout.svg" class="li" id="arrow">
+             <a href="login.html" class="out">Sign out</a>
+             </div>
+             </li>
+            </ul>
+        </div>
+        <div class="B">
+            <div id="text">
+            <h1>Hello, split those large files here</h1>
+            <div class="search">
+                <input class="search-files" type="text" placeholder="Search uploaded files">
+            </div>
+            </div>
+            <p>Split csv and json files, effortlessly and within seconds</p>
+        </div>
+        <div class="C">
+            <div class="upload">
+                <h3>Upload file</h3>
+                <img src="document-upload.svg" class="li1">
+            </div>
+            <p id="upload">The allowed formats are csv,json only</p>
+            <div class="choose">
+                <fieldset id="fieldset">
+                    <input id="choose-file" type="text" placeholder="Choose file">
+                    <p class="fieldset">No file chosen</p>
+                </fieldset>
+            </div>
+        </div>
+        <div class="D">
+            <div class="customize">
+                <h3>Customize setting</h3>
+                <img src="setting-4.svg" class="li1">
+            </div>
+                <p class="custom">Select chunk sizes or number of desired output chunks</p>
+                <form action="" id="form">
+                    <p>What do you want to do?</p>
+                    <div class="chunk">
+                    <label for="chunk-size">Select chunk size</label>
+                    <input type="radio" id="chunk-size" name="chunk-size" value="chunk-size">
+                    <label for="split">Split by number of chunks</label>
+                    <input type="radio" id="split" name="split" value="split" checked>
+                    </div>
+                    <div class="select">
+                        <input type="number" placeholder="Input value" id="chunk">
+                        <select name="chunking-options" id="chun">
+                            <option>Size</option>
+                            <option>KB</option>
+                            <option>MB</option>
+                        </select>
+                        <input type="number" placeholder="Input value"id="chunk" >
+                        </div>
+                          </select>
+                          <button id="split">SPLIT</button>
+                </form>
+            
+        </div>
+        <div class="E">
+            <div class="recent">
+                <h3>Recent activities</h3>
+                <img src="document-download.svg" class="li1">
+                </div>
+                <p class="seven">View your recently split files. Download files up to 7 days ago.</p>
+                <ul>
+                    <li class="l2">
+                        <a href="#" class="l3">Zuri final sheet.csv</a>
+                        <p class="when">today</p>
+                    </li>
+                    <li class="l2">
+                        <a href="#" class="l3">E-commerce database.json</a>
+                        <p  class="when">today</p>
+                    </li>
+                    <li class="l2">
+                        <a href="#" class="l3">Year 4 final result.csv</a>
+                        <p  class="when">today</p>
+                    </li>
+                    <li class="l2">
+                        <a href="#" class="l3">Developer snag list.csv</a>
+                        <p  class="when">yesterday</p>
+                    </li>
+                </ul>
+                <div class="view">
+                <a href="#" id="view">View more</a>
+                </div>
+        </div>
+        <div class="F">
+            <div class="download">
+                <h4>Download</h4>
+                <a href="#" id="all">View all</a>
+            </div>
+            <div class="download-button">
+                <button id="download-button">Download</button>
+            </div>
+            <p class="files">Files will be downloaded to device</p>
+        </div>
+        <div class="G">
+            <div class="share">
+                <h4>Share</h4>
+                <a href="#" id="all">View more</a>
+                </div>
+                <div class="link">
+                    <p id="copy">Copy Link to clipboard</p>
+                    <a href="#"id="link"><b>www.shredit.net/G9w7qp0</b></a>
+                </div>
+        </div>
+        <div class="I"><hr></div>
+        <div class="H">
+            <div class="soon">
+                <h3>Coming soon</h3>
+                <img src="Vector 1.svg" class="li1">
+                </div>
+                <p class="format">We are currently working on new formats</p>
+                <ul>
+                    <li>XML,</li>
+                    <li>TXT,</li>
+                    <li>and many more.</li>
+                </ul>
+            <p class="mail">Enter your email and we'll remind you</p>
+            <input id="mail" type="email" placeholder="Enter your email address">
+            <button id="submit" type="submit">Submit</button>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
