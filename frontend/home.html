@@ -26,31 +26,31 @@
                 <ul>
                     <li id="sec-A">
                         <div class="sec-A">
-                    <img src="copy.png" class="li">
+                    <img src="save-2.svg" class="li">
                     <a href="#">Saved files</a>
                     </div>
                     </li>
                     <li  id="sec-A">
                         <div class="sec-A">
-                    <img src="document.png" class="li">
+                    <img src="document-download.svg" class="li">
                     <a href="#">Downloads</a>
                     </div>
                     </li>
                     <li  id="sec-A">
                         <div class="sec-A">
-                    <img src="share (2).png" class="li">
+                    <img src="share.svg" class="li">
                     <a href="#">Share</a>
                     </div>
                     </li>
                     <li  id="sec-A">
                         <div class="sec-A">
-                    <img src="setting.png" class="li">
+                    <img src="setting-2.svg" class="li">
                     <a href="#">Settings</a>
                     </div>
                     </li>
                     <li  id="sec-A">
                     <div class="sec-A">
-                    <img src="chat.png" class="li">
+                    <img src="message-question.svg" class="li">
                    <a href="#">Help centre</a>
                     </div>
                     </li>
@@ -59,13 +59,13 @@
             <section class="meter">
                 <div class="total">
                     <p>3 GB used out of 5 GB</p>
-                    <meter value="0.6">60%</meter>
+                    <progress value="0.6">60%</progress>
                 </div>
             </section>
             <ul>
                 <li  id="sec-A">
                     <div class="sec-B">
-            <img src="log-out.png" class="li" id="arrow">
+            <img src="logout.svg" class="li" id="arrow">
              <a href="login.html" class="out">Sign out</a>
              </div>
              </li>
@@ -83,7 +83,7 @@
         <div class="C">
             <div class="upload">
                 <h3>Upload file</h3>
-                <img src="document.png" class="li1">
+                <img src="document-upload.svg" class="li1">
             </div>
             <p id="upload">The allowed formats are csv,json only</p>
             <div class="choose">
@@ -96,20 +96,26 @@
         <div class="D">
             <div class="customize">
                 <h3>Customize setting</h3>
-                <img src="settings.png" class="li1">
+                <img src="setting-4.svg" class="li1">
             </div>
                 <p class="custom">Select chunk sizes or number of desired output chunks</p>
                 <form action="" id="form">
                     <p>What do you want to do?</p>
+                    <div class="chunk">
                     <label for="chunk-size">Select chunk size</label>
                     <input type="radio" id="chunk-size" name="chunk-size" value="chunk-size">
-                    <label for="split">Split by chunk size</label>
-                    <input type="radio" id="split" name="split" value="split">
-                        <input type="number" placeholder="Input value">
-                        <input type="number" placeholder="Input value">
-                        <select name="chunking-options" id="chunk">
-                            <option value="size">Size</option>
-                            <option value="number">Number</option>
+                    <label for="split">Split by number of chunks</label>
+                    <input type="radio" id="split" name="split" value="split" checked>
+                    </div>
+                    <div class="select">
+                        <input type="number" placeholder="Input value" id="chunk">
+                        <select name="chunking-options" id="chun">
+                            <option>Size</option>
+                            <option>KB</option>
+                            <option>MB</option>
+                        </select>
+                        <input type="number" placeholder="Input value"id="chunk" >
+                        </div>
                           </select>
                           <button id="split">SPLIT</button>
                 </form>
@@ -118,7 +124,7 @@
         <div class="E">
             <div class="recent">
                 <h3>Recent activities</h3>
-                <img src="document.png" class="li1">
+                <img src="document-download.svg" class="li1">
                 </div>
                 <p class="seven">View your recently split files. Download files up to 7 days ago.</p>
                 <ul>
@@ -167,8 +173,9 @@
         <div class="H">
             <div class="soon">
                 <h3>Coming soon</h3>
-                <p class="format">We are currently working on new formats</p>
+                <img src="Vector 1.svg" class="li1">
                 </div>
+                <p class="format">We are currently working on new formats</p>
                 <ul>
                     <li>XML,</li>
                     <li>TXT,</li>

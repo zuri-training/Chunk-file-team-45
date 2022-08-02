@@ -212,6 +212,7 @@ a{
     flex-direction: row;
     align-items: center;
     gap:150px;
+    color: #012345;
 }
 #upload{
     padding-top: 10px;
@@ -248,6 +249,36 @@ a{
     flex-direction: row;
     align-items: center;
     gap:150px;
+    color: #012345;
+}
+#size{
+    font-family: 'Clash Grotesk';
+}
+.chunk{
+    font-family: 'Clash Grotesk';
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+}
+#chun{
+    font-weight: bold;
+    color: #012345;
+}
+#chunk{
+    padding: 7px;
+    font-family: 'Clash Grotesk';
+   /* #FFFFFF - White */
+
+    background: #FFFFFF;
+    /* IOTA/Primary/Main primary */
+
+    border: 1px solid #034C95;
+    border-radius: 6px;
+    text-align: center;
+}
+.select{
+    display: flex;
 }
 .custom{
     padding-top: 10px;
@@ -262,6 +293,7 @@ a{
     display: flex;
     flex-direction: row;
     gap:100px;
+    color: #012345;
 }
 .seven{
     padding-top: 10px;
@@ -295,6 +327,7 @@ a{
     font-style: normal;
     align-items: center;
     gap: 60px;
+    color: #012345;
 }
 #all{
     color: red;
@@ -322,6 +355,7 @@ a{
     font-style: normal;
     align-items: center;
     gap: 90px;
+    color: #012345;
 }
 .link{
     padding-top: 40px;
@@ -341,11 +375,12 @@ a{
 .soon{
     font-family: 'Clash Grotesk';
     font-style: normal;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    color: #012345;
 }
 .format{
     font-size: small;
-    display: flex;
     padding-top: 15px;
     font-size: 13px;
 }
