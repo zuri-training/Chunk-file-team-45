@@ -252,8 +252,252 @@ body{
 
 }
 
+/* *****************FIRST MAIN********************* */
+main{
+    padding: 0 86px;
+}
+
+.first-main{
+    display: flex;
+    padding: 91px 0;
+    align-items: center;
+}
+.bold-text p{
+    font-size: 72px;
+    line-height: 89px;
+    font-weight: 500;
+    color: #034C95;
+    margin-bottom: 40px;
+}
+
+.light-text p{
+    color: #012345;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 49px;
+    margin-bottom: 32px;
+}
+
+.btn-color{
+    color: #E82E5D;
+    background-color: #fff;
+    border: 1px solid #E82E5D;
+    filter: drop-shadow(0px 0px 8px rgba(1, 35, 69, 0.1));
+    border-radius: 16px;
+    margin-left: 31px;
+    margin-bottom: 50px;
+}
+
+.additional-info{
+    display: flex;
+
+}
+
+.info-2{
+    margin-left: 66px;
+    display: flex;
+    align-items: center;
+}
+
+.info-1{
+    display: flex;
+    align-items: center;   
+}
+
+.info-1 span, .info-2 span{
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* ************SECTION 2****************************** */
+.second-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 165px;
+}
+.second-main-content{
+    text-align: justify;
+    width: 800px;
+}
 
 
+.bold-text2 p{
+    font-size: 72px;
+    line-height: 89px;
+    font-weight: 500;
+    color: #034C95;
+    margin-bottom: 40px;
+    
+}
+
+.light-text2 p{
+    color: #012345;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 49px;
+    margin-bottom: 32px;
+}
+
+/* ********************CHUNK FILES************************* */
+.chunk{
+    margin-bottom: 165px;
+}
+.chunk-content{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 88px;
+}
+
+/* **********************USE IOTA*************************** */
+
+.use-iota .p1{
+    color: #6B152B;
+    font-size: 64px;
+    text-align: center;
+    line-height: 78.72px;
+    font-weight: 500;
+}
+
+.use-iota .p2{
+    color: #6B152B;
+    font-size: 40px;
+    text-align: center;
+    line-height: 49.2px;
+    margin-bottom: 64px;
+}
+
+.fields{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 172px;
+}
+.field-one{
+    border: 2px solid #012345;
+    border-radius: 16px;
+    padding: 46px 38px 39px 39px;
+}
+.field-one img{
+    margin-bottom: 41px;
+}
+
+.field-one .title{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #034C95;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.field-one .subtitle{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #012345;
+    text-align: center;
+}
+/* **************TESTIMONIAL************************* */
+.testimonial .title{
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 79px;
+    text-align: center;
+    color: #012345;
+    margin-bottom: 20px;
+}
+
+.testimonial .subtitle{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    color: #012345;
+    margin-bottom: 64px;
+}
+
+.pink-bg{
+    background: #FFA1B9;
+    border-radius: 18px;
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.extend-div{
+    position: relative;
+}
+
+.messages{
+    position: absolute;
+    top: 60px;
+    display: flex;
+    width: 100%;
+    
+}
+
+.testimony-1, .testimony-2, .testimony-3{
+    background: #FFFDFE;
+    border-radius: 16px;
+    padding: 15px 32px 15px 34px;
+    width: 496px;
+
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+.testimony-2, .testimony-3{
+    margin-left: 40px;
+}
+
+.testimonial .testimony{
+    color: #6B152B;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 16px;
+}
+.testimony-image{
+    margin-bottom: 13px;
+}
+.testimonial .hr{
+    border: 0.5px solid #1B1B1B;
+    margin-bottom: 16px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.details .name{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    color: #6B152B;
+}
+.profile .details{
+    margin-left: 14px;
+}
+.details .prof{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6B152B;
+}
+
+.read-more{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 165px;
+}
 /* ****************FOOTER************************ */
 .footer{
     background: #034C95;
