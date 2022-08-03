@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
-
 /* ************HEADER CSS******************* */
 *{
     margin: 0;
@@ -13,23 +9,23 @@
 html, body{
     background-color: #FDFDFE;;
     min-height: 100vh;
-    max-height: 500vh;
+    max-height: 100vh;
 }
 
 
-
 .nav{
-    font-family: 'Familjen Grotesk', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 48px;
+    padding: 40px;
     background: #E6EEF6;
 }
 
 .nav_logo{
     display: flex;
     align-items: center;
+    padding-left: 40px;
     /* border: 2px solid red; */
 }
 
@@ -63,8 +59,9 @@ html, body{
 
 .nav_signin_signup{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding-right: 40px;
 }
 
 .signin a{
@@ -82,7 +79,7 @@ html, body{
     -webkit-border-radius: 16;
     -moz-border-radius: 16;
     border-radius: 16px;
-    font-family: Arial;
+    font-family: 'Clash Grotesk', sans-serif;
     color: #ffffff;
     font-size: 20px;
     background: #034C95;
@@ -94,9 +91,7 @@ html, body{
 .btn:hover {
     text-decoration: none;
     cursor: pointer;
-    background-color: #F4F7FB;
-    color: #0353A4;
-    border: 1px solid #0353A4;
+    background-color: #3575B6;
 }
 
 
@@ -252,10 +247,13 @@ html, body{
         font-size: 20px;
         margin-right: 0.83rem;
     }
+
+   
+
 }
 @media only screen and (max-width:830px) {
     .nav{
-        padding: 8px 20px;
+        padding: 8px 0px 8px 10px;
     }
     .menu__btn{
         display: block;
@@ -267,16 +265,20 @@ html, body{
 
 }
 
+
+
+
 /** body contents**/
 h4{
-    font-family: 'Familjen Grotesk', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 400;
     color: #0353A4;
 }
 
 p{
-    font-family: 'Familjen Grotesk', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-size: 20px;
     color: #012345;
 }
 
@@ -287,25 +289,29 @@ input{
 }
 
 input[placeholder="Enter your username"]{
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
     color: #A3A9AF;
     font-size: 12px;
     font-weight: 300;
 }
 
 input[placeholder="Enter your password"]{
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
     color: #A3A9AF;
     font-size: 12px;
     font-weight: 300;
 }
 
+
+.layer{
+    padding-bottom: 30px;
+}
 .content{
     background-color: #F4F7FB;
     margin: 0 auto;
     width: 95%;
-    height: 510px;
-    padding-left: 180px;
+    height: max-content;
+    /* padding-left: 180px; */
     padding-top: 40px;
     padding-bottom: 60px;
 }
@@ -313,12 +319,11 @@ input[placeholder="Enter your password"]{
 .option{
     width: 20px;
     height: 20px;
-    
 }
 
 #click{
     width: 200px;
-    font-family: 'Familjen Grotesk', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
     font-weight: 500;
     font-size: 15px;
     color: #E82E5D;
@@ -335,40 +340,15 @@ input[placeholder="Enter your password"]{
 
 #click:hover{
     cursor: pointer;
-    background-color: #F4F7FB;
-    color: #0353A4;
-    border: 1px solid #0353A4;
+    border: 1px solid #8C1C38;
+    border-radius: 16px;
 }
 
-.help{
-    position: relative;
-    left: 295px;
-    color: #0353A4;
-    text-decoration: none;
-}
-
-.help:hover{
-    color:#E82E5D;
-    cursor: pointer;
-}
-
-.remember{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width:130px;
-    
-}
-
-.mark{
-    color: #0353A4;
-}
 
 #btn{
     border-radius: 10px;
     width: 150px;
-    font-family: 'Familjen Grotesk', sans-serif;
+    font-family: 'Clash Grotesk', sans-serif;
     color: #ffffff;
     font-size: 15px;
     font-weight: 400;
@@ -380,15 +360,13 @@ input[placeholder="Enter your password"]{
 
 #btn:hover{
     cursor: pointer;
-    background-color: #F4F7FB;
-    color: #0353A4;
-    border: 1px solid #0353A4;
+    background-color: #3575B6;
 }
 
 .bottom{
         font-size: 12px;
         position: relative;
-        bottom: 10px;
+        bottom: 20px;
 }
 
 #last{
@@ -397,5 +375,58 @@ input[placeholder="Enter your password"]{
 
 #last:hover{
     cursor: pointer;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 32px 0px ; */
+    font-family: 'Clash Grotesk', sans-serif;
+    font-size: 14px;
+    width: 400px;  
+}
+
+.checkbox div{
+    margin:12px 0px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input{
+    border: 10px solid red;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+}
+
+.checkbox label{
+    margin-left: 18px;
+}
+
+.forgot{
+    /* margin-bottom: 12px; */
+    font-size: 12px;
+}
+
+.forgot a{
+    text-decoration: none;
+    color: #034C95;
+}
+
+
+@media only screen and (max-width: 1430px){
+    .content{
+        padding-left: 150px;
+    }
+
+}
+@media only screen and (max-width:830px) {
+    .content{
+        padding: 20px;
+    }
+
+
+
 }
 
