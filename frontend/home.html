@@ -15,8 +15,8 @@
             <section class="icon">
                 <img src="desktop logo.png">
             </section>
-            <section class="dashboard">
-                <h2>DASHBOARD</h2>
+            <section>
+                <h2 class="dashboard">DASHBOARD</h2>
             </section>
             <section class="details">
                 <p><b>Username:</b> Kanyisola</p>
@@ -33,7 +33,7 @@
                     <li  id="sec-A">
                         <div class="sec-A">
                     <img src="document-download.svg" class="li">
-                    <a href="#">Downloads</a>
+                    <a href="#"">Downloads</a>
                     </div>
                     </li>
                     <li  id="sec-A">
@@ -56,14 +56,14 @@
                     </li>
                 </ul>
             </section>
-            <section class="meter">
+            <section class="progress">
                 <div class="total">
                     <p>3 GB used out of 5 GB</p>
                     <progress value="0.6">60%</progress>
                 </div>
             </section>
             <ul>
-                <li  id="sec-A">
+                <li id="sec-B">
                     <div class="sec-B">
             <img src="logout.svg" class="li" id="arrow">
              <a href="login.html" class="out">Sign out</a>
@@ -82,7 +82,7 @@
         </div>
         <div class="C">
             <div class="upload">
-                <h3>Upload file</h3>
+                <h3 id="up">Upload file</h3>
                 <img src="document-upload.svg" class="li1">
             </div>
             <p id="upload">The allowed formats are csv,json only</p>
@@ -95,7 +95,7 @@
         </div>
         <div class="D">
             <div class="customize">
-                <h3>Customize setting</h3>
+                <h3 id="cust">Customize setting</h3>
                 <img src="setting-4.svg" class="li1">
             </div>
                 <p class="custom">Select chunk sizes or number of desired output chunks</p>
@@ -110,20 +110,22 @@
                     <div class="select">
                         <input type="number" placeholder="Input value" id="chunk">
                         <select name="chunking-options" id="chun">
-                            <option>Size</option>
+                            <option disabled selected>Size</option>
                             <option>KB</option>
                             <option>MB</option>
                         </select>
                         <input type="number" placeholder="Input value"id="chunk" >
                         </div>
                           </select>
+                          <div class="split">
                           <button id="split">SPLIT</button>
+                          </div>
                 </form>
             
         </div>
         <div class="E">
             <div class="recent">
-                <h3>Recent activities</h3>
+                <h3 id="act">Recent activities</h3>
                 <img src="document-download.svg" class="li1">
                 </div>
                 <p class="seven">View your recently split files. Download files up to 7 days ago.</p>
@@ -172,11 +174,11 @@
         <div class="I"><hr></div>
         <div class="H">
             <div class="soon">
-                <h3>Coming soon</h3>
+                <h3 id="come">Coming soon</h3>
                 <img src="Vector 1.svg" class="li1">
                 </div>
                 <p class="format">We are currently working on new formats</p>
-                <ul>
+                <ul id="ul">
                     <li>XML,</li>
                     <li>TXT,</li>
                     <li>and many more.</li>
