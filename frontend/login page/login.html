@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/8475bf5886.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="login.css">
     
-    <!-- -----------------GOOGLE FONT LINKS--------------------------- -->
+    <!-- ----------------- FONT LINKS--------------------------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -53,36 +52,38 @@
       </header><br><br>
 
 
-      <div class="content">
-        <h4>Welcome Back</h4><br>
-        <button id="click" type="button" value="text"><img src="https://w7.pngwing.com/pngs/882/225/png-transparent-google-logo-google-logo-google-search-icon-google-text-logo-business.png" class="option">Log in with Google</button><br><br>
+      <section class="layer">
+
+            <div class="content">
+                <h4>Welcome Back</h4><br>
+                <button id="click" type="button" value="text"><img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png" class="option">Log in with Google</button><br><br>
 
 
 
-        <form>
-            <p>Username<i class="fa-light fa-asterisk" style="color:#E82E5D;"></i></p>
-            <label for="username"></label>
-            <input type="text" class="details" name="username" placeholder="Enter your username"><br><br>
-            <p>Password<i class="fa-light fa-asterisk" style="color:#E82E5D;"></i></p>
-            <label for="password"></label>
-            <input type="text" class="details" name="password" placeholder="Enter your password"><br><br>
-        </form>
+                <form>
+                    <p>Username<i class="fa-light fa-asterisk" style="color:#E82E5D;"></i></p>
+                    <label for="username"></label>
+                    <input type="text" class="details" name="username" placeholder="Enter your username"><br><br>
+                    <p>Password<i class="fa-light fa-asterisk" style="color:#E82E5D;"></i></p>
+                    <label for="password"></label>
+                    <input type="text" class="details" name="password" placeholder="Enter your password">
+                    <div class="checkbox">
+                        <div>
+                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <label for="checkbox">Keep me logged in</label>
+                        </div>
+                        <p class="forgot"><a href="#">Forgot password?</a></p> 
+                    </div>
+                </form>
 
 
-        
-        <p><a href="#" class="help"><small>Forgot password?</small></a></p>
-
-        <div class="remember">
-            <i class="fa-regular fa-square-check" style="color:#034C95;" width="50px;"></i>
-            <p><small class="mark">Keep me logged in</small></i></p><br><br>
-        </div><br>
-
-        <button type="submit" value="text" id="btn">Login</button><br><br>
+                <button type="submit" value="text" id="btn">Login</button><br><br><br>
 
 
-        <p class="bottom">Don't have an account? <a href="#" style="color: #0353A4;" id="last"><b>Sign up</b></a></p>
+                <p class="bottom">Don't have an account? <a href="#" style="color: #0353A4;" id="last"><b>Sign up</b></a></p>
 
-      </div>
+            </div>
+        </section>
     </main>
 </body>
 <script src="login.js"></script>
