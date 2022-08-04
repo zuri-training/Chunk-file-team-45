@@ -12,11 +12,11 @@ user can perform all the actions allowed on the platform.
 
 
 ## Project Stack
-- Python
-- Django
-- Javascript
-- CSS
-- HTML
+* Python
+* Django
+* Javascript
+* CSS
+* HTML
 
 HTML, CSS and Javascript are used to design the frontend while we deploy Python and it's Django framework for the Backend
 The user authentication is done with with Django inbuilt auth system  and the file splitting is done with python.
@@ -25,3 +25,7 @@ The user authentication is done with with Django inbuilt auth system  and the fi
 ## DOCUMENTATIONS
 - Figma Board
 https://www.figma.com/file/u1asikejW1s1pF9NU51pPd/FIGMA---Chunk-file%2FTEAM-45?node-id=480%3A339
+
+
+## Database Schema
+<img src="Chunk-file-team-45/chucky/chucky-ERD.png" height=500>  
