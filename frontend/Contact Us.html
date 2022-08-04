@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="Contact Us.css">
+
+
+    
+    <!-- -----------------GOOGLE FONT LINKS--------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- -----------------HEADER-------------------- -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav_logo">
+                <img src="logo.svg" alt="iota_logo">
+                <p>iOTA</p>
+            </div>
+            
+            <div class="nav_links">
+                <div class="nav_link"><a href="#">About us</a></div>
+                <div class="nav_link"><a href="#">Documentation</a></div>
+                <div class="nav_link"><a href="#">Contact us</a></div>
+                <div class="nav_link"><a href="#">Resources</a></div>
+            </div>
+    
+            <div class="nav_signin_signup">
+                <div class="signin"><a href="#">Sign in</a></div>
+                <button class="btn">Sign up</button>
+            </div>
+    
+            <div class="menu__btn"> 
+                <div class="menu__btn--burger"></div>
+            </div>
+        </nav>
+        
+
+            <!--RESPONSIVE NAV-->
+        <div class="responsive">
+            <div><a href="#">About us</a></div>
+            <div><a href="#">Documentation</a></div>
+            <div><a href="#">Contact us</a></div>
+            <div><a href="#">Resources</a></div>
+            <div><a href="#">Sign in</a></div>
+            <div><a href="#">Sign up</a></div>
+        </div>
+    </header>
+    <main>
+        <div class="container-md">
+            <div class="row  align-items-center justify-content-md-center">
+                <div class="col"><div class="p-5">
+                    <img src="phone.jpeg"  alt="phone-logo" height ="200px" width ="400px" class = "img">
+                </div></div>
+                <div class="col p-5 "> 
+                    <h1 class="cont text-center"><strong>Contact Us</h1></strong>
+                    <h6 class="ben">Any questions? Drop a message for us and we would get back to you!</h6>
+                
+                    <form>
+                        <div>
+                            <label for ="name" class = "form-label">Name</label>
+                            <input type = 'text' class="form-control" id="name" placeholder="Enter Your Full Name" maxlength = "50" required>
+                        </div>
+                        <div>
+                            <label for ="Email" class = "form-label">Email</label>
+                            <input type ="text" class="form-control form-control-sm" id = "email" placeholder="Enter Email Address" required>
+                        </div>
+                        <div>
+                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Write Message..." max="250" minlength="100" required></textarea>
+                        </div>
+                        <div>
+                            <button type = "button" class = "button">SEND</button>
+                        </div>    
+                        
+                    </form>
+                
+                </div>
+          
+            
+    
+            <div class=" row">
+                <div class="p-5">
+                    <h3 class="freq">FAQS</h3>
+                    <h6><strong><img src="Frame 83.svg">  What is Iota? </h6></strong>
+                    <p>Iota is the easiest way to split a CSV/JSON file into multiple pieces. You upload a file, specify how you want it cut up, and boom! We give you the pieces you asked for.</p>
+                    <h6><strong><img src="Frame 83.svg">  What are your system requirements?</h6></strong>
+                    <p>We have very basic system requirements. To run smoothly our tools, we recommend you to work with the following browsers: Chrome, Firefox, Explorer +10 and Safari. If at any point would you experience issues within the download screen, we recommend you to set your browser to Incognito mode</p>
+                    <h6><strong><img src="Frame 83.svg">  Why did I not receive the confirmation of my email address?</h6></strong>
+                    <p>The confirmation email should be delivered to your email account immediately. Although, sometimes it may take some time. If after 30 minutes nothing makes it into your inbox, check your Spam/Trash Folder or shoot us an email.</p>
+                    <h6><strong><img src="Frame 83.svg">  Do I need to sign up or create an account?</h6></strong>
+                    <p>Yes. You need to create an account so you can Split your CSV/JSON files and also 
+                    access other split.io features.</p>
+                    <h6><strong><img src="Frame 83.svg">  How can I upload my files?</h6></strong>
+                    <p>You can click on Select files button or import your files from the storage systems.</p>
+                    <h6><strong><img src="Frame 83.svg">  Why does splitting a file take so long?</h6></strong>
+                    <p>Unfortunately, this is not entirely in our hands. Processing speed depends on many factors, so the time that will take you to get your files converted will depend as well on your own Internet connection speed, the size of the selected files and, mostly, on how busy our servers are.</p>
+                    <h6><strong><img src="Frame 83.svg">  Do you keep a copy of my processed files?</h6></strong>
+                    <p>Absolutely not. Your files are only yours. While your files are in our servers, they are strictly secured and no one can access them. We just keep them safe for you so you can download them. You can also delete the document by yourself at the end of each conversion. We won’t check, copy or analyze your files in any way.</p>
+                    <h6><strong><img src="Frame 83.svg">I have another question not covered here?</h6></strong>
+                    <p class="pen">Contact us! Send us a message...</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- ------------------FOOTER--------------------- -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="logo_text">
+                <div class="footer_logo">
+                    <img src="iota_logo_white.svg" alt="iota_logo">
+                    <p>iOTA</p>
+                </div>
+
+                <p class="footer-content">A platform that helps to simplify and make data sorting operations easier, faster, and more efficient by breaking them down into smaller chunks</p>
+            </div>
+
+            <div class="footer_company">
+                <div class="footer-title">Company</div>
+                <div class="footer-child"><a href="#">About us</a></div>
+                <div class="footer-child"><a href="#">Privacy policies</a></div>
+                <div class="footer-child"><a href="#">Contact us</a></div>
+                <div class="footer-child"><a href="#">FAQs</a></div>
+            </div>
+
+            <div class="footer_developers">
+                <div class="footer-title">Developers</div>
+                <div class="footer-child"><a href="#">Documentations</a></div>
+                <div class="footer-child"><a href="#">APIs</a></div>
+            </div>
+
+            <div class="footer_developers">
+                <div class="footer-title">Resources</div>
+                <div class="footer-child footer-letter">How to</div>
+                <div class="footer-child"><a href="#">Split a large Json file</a></div>
+                <div class="footer-child"><a href="#">Deleting duplicates from csv file</a></div>
+                <div class="footer-child last"><a href="#">CSV and Json spliter</a></div>
+            </div>
+        </div>
+
+        <div class="hr_line"></div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                <img src="copyright.svg" alt="copyright">
+                <p>iOTA team 45 - Made with love for the online community</p>
+            </div>
+        </div>
+       </footer>
+      </main>
+
+
+<script src="index.js"></script>
+</html>

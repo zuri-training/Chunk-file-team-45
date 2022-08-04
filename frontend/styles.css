@@ -1,40 +1,30 @@
 /* ************HEADER CSS******************* */
 *{
     margin: 0;
-    box-sizing: border-box;
-    max-width: 100%;
     padding: 0;
+    box-sizing: border-box;
 }
-
-html, body{
-    background-color: #FDFDFE;;
-    min-height: 100vh;
-    max-height: 100vh;
-}
-
 
 .nav{
-    font-family: 'Clash Grotesk', sans-serif;
+    font-family: 'Familjen Grotesk', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    padding: 48px;
     background: #E6EEF6;
 }
 
 .nav_logo{
     display: flex;
     align-items: center;
-    padding-left: 40px;
     /* border: 2px solid red; */
 }
 
-.nav_logo a{
+.nav_logo p{
     font-size: 72px;
     font-weight: 900;
     margin-left: 1.5rem;
     color: #034C95;
-    text-decoration: none;
     /* border: 2px solid red; */
 }
 
@@ -60,9 +50,8 @@ html, body{
 
 .nav_signin_signup{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding-right: 40px;
 }
 
 .signin a{
@@ -80,7 +69,7 @@ html, body{
     -webkit-border-radius: 16;
     -moz-border-radius: 16;
     border-radius: 16px;
-    font-family: 'Clash Grotesk', sans-serif;
+    font-family: Arial;
     color: #ffffff;
     font-size: 20px;
     background: #034C95;
@@ -92,7 +81,7 @@ html, body{
 .btn:hover {
     text-decoration: none;
     cursor: pointer;
-    background-color: #3575B6;
+    background: #012345;;
 }
 
 
@@ -146,7 +135,6 @@ html, body{
 .responsive{
     /* border: 2px solid black; */
     display: none;
-    
     
 }
 
@@ -232,7 +220,7 @@ html, body{
         height: 40px;
     }
 
-    .nav_logo a{
+    .nav_logo p{
         font-size: 32px;
         margin-left: 0.75rem;
     }
@@ -248,13 +236,10 @@ html, body{
         font-size: 20px;
         margin-right: 0.83rem;
     }
-
-   
-
 }
 @media only screen and (max-width:830px) {
     .nav{
-        padding: 8px 0px 8px 10px;
+        padding: 8px 20px;
     }
     .menu__btn{
         display: block;
@@ -267,167 +252,148 @@ html, body{
 }
 
 
-
-
-/** body contents**/
-h4{
-    font-family: 'Clash Grotesk', sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    color: #0353A4;
-}
-
-p{
-    font-family: 'Clash Grotesk', sans-serif;
-    font-size: 20px;
-    color: #012345;
-}
-
-input{
-    width: 400px;
-    padding: 10px;
-    border: none;
-}
-
-input[placeholder="Enter your username"]{
-    font-family: 'Clash Grotesk', sans-serif;
-    color: #A3A9AF;
-    font-size: 12px;
-    font-weight: 300;
-}
-
-input[placeholder="Enter your password"]{
-    font-family: 'Clash Grotesk', sans-serif;
-    color: #A3A9AF;
-    font-size: 12px;
-    font-weight: 300;
-}
-
-
-.layer{
-    padding-bottom: 30px;
-}
-.content{
-    background-color: #F4F7FB;
-    margin: 0 auto;
-    width: 95%;
-    height: max-content;
-    /* padding-left: 180px; */
-    padding-top: 40px;
-    padding-bottom: 60px;
-}
-
-.option{
-    width: 20px;
-    height: 20px;
-}
-
-#click{
-    width: 200px;
-    font-family: 'Clash Grotesk', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: #E82E5D;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-    gap: 8px;
-    background-color: #F4F7FB;
-    border: 1px solid #E82E5D;
-    border-radius: 10px;
-}
-
-#click:hover{
-    cursor: pointer;
-    border: 1px solid #8C1C38;
-    border-radius: 16px;
-}
-
-
-#btn{
-    border-radius: 10px;
-    width: 150px;
-    font-family: 'Clash Grotesk', sans-serif;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 400;
+/* ****************FOOTER************************ */
+.footer{
     background: #034C95;
-    border:#034C95;
-    padding: 12px 30px 12px 30px;
-    text-decoration: none;
+    padding: 56px 80px;
 }
 
-#btn:hover{
-    cursor: pointer;
-    background-color: #3575B6;
-}
-
-.bottom{
-        font-size: 12px;
-        position: relative;
-        bottom: 20px;
-}
-
-#last{
-    text-decoration: none;
-}
-
-#last:hover{
-    cursor: pointer;
-}
-
-.checkbox{
+.footer-top{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* margin: 32px 0px ; */
-    font-family: 'Clash Grotesk', sans-serif;
-    font-size: 14px;
-    width: 400px;  
 }
 
-.checkbox div{
-    margin:12px 0px 24px;
+.footer_logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 88px;
+}
+
+.footer-content{
+    color: #FDFDFE;
+    font-size: 24px;
+    line-height: 30px;
+    width: 382px;
+    margin-bottom: 172px;
+}
+
+.footer_logo p{
+    font-size: 72px;
+    font-weight: 900;
+    color: #FDFDFE;
+    margin-left: 24px;
+}
+
+.footer-title{
+    color: #E82E5D;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 64px;
+}
+
+.footer-child{
+    color:#FFFFFF;
+    font-size: 32px;
+    margin-bottom: 32px;
+
+}
+
+.footer-child a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.last{
+    margin-bottom: 74px;
+}
+
+.hr_line{
+    border-bottom: 2px solid #E82E5D;
+    margin-bottom: 53px;
+}
+
+.copyright{
     display: flex;
     align-items: center;
 }
 
-.checkbox input{
-    border: 10px solid red;
-    width: 20px;
-    height: 20px;
-    padding: 20px;
+.footer-bottom img{
+    color: #FDFDFE;
 }
 
-.checkbox label{
-    margin-left: 18px;
+.footer-bottom p{
+    font-size: 28px;
+    font-weight: 500;
+    color: #FDFDFE;
+    margin-left: 16px;
 }
 
-.forgot{
-    /* margin-bottom: 12px; */
-    font-size: 12px;
-}
-
-.forgot a{
-    text-decoration: none;
-    color: #034C95;
-}
-
-
-@media only screen and (max-width: 1430px){
-    .content{
-        padding-left: 150px;
+@media only screen and (max-width:1440px){
+    .footer_logo{
+        margin-bottom: 40px;
+    }
+    .footer_logo img{
+        width: 40px;
+        height: 40px;
     }
 
-}
-@media only screen and (max-width:830px) {
-    .content{
-        padding: 20px;
+    .footer_logo p{
+        font-size: 32px;
     }
 
+    .footer-content{
+        font-size: 16px;
+        width: 172px;
+    }
 
+    .footer-title{
+        font-size: 24px;
+    }
 
+    .footer-child{
+        font-size: 16px;
+    }
+
+    .copyright p{
+        font-size: 20px;
+    }
 }
 
+@media only screen and (max-width:805px){
+    .footer-top{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .footer_logo img{
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer_logo p{
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .footer-content{
+        font-size: 16px;
+        width: 80%;
+        margin-bottom: 16px;
+    }
+
+    .footer-title{
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .footer-child{
+        font-size: 16px;
+    }
+
+    .copyright p{
+        font-size: 12px;
+    }
+    .copyright img{
+        width: 16px;
+    }
+}
