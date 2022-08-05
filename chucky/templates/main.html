@@ -28,9 +28,9 @@
             </div>
             
             <div class="nav_links">
-                <div class="nav_link"><a href="#">About us</a></div>
+                <div class="nav_link"><a href="{% url 'shredit:about' %}">About us</a></div>
                 <div class="nav_link"><a href="#">Documentation</a></div>
-                <div class="nav_link"><a href="#">Contact us</a></div>
+                <div class="nav_link"><a href="{% url 'shredit:contact' %}">Contact us</a></div>
                 <div class="nav_link"><a href="#">Resources</a></div>
             </div>
             
@@ -51,9 +51,9 @@
 
             <!--RESPONSIVE NAV-->
         <div class="responsive">
-            <div><a href="#">About us</a></div>
+            <div><a href="{% url 'shredit:about' %}">About us</a></div>
             <div><a href="#">Documentation</a></div>
-            <div><a href="#">Contact us</a></div>
+            <div><a href="{% url 'shredit:contact' %}">Contact us</a></div>
             <div><a href="#">Resources</a></div>
             {% if not user.is_authenticated %}
             <div><a href="{% url 'user:user-login' %}">Sign in</a></div>
@@ -61,7 +61,8 @@
             {% endif %}
         </div>
     </header>
-        {% include 'messages.html' %}  
+    {% include 'messages.html' %}  
+    
     {% block content %}
     {% endblock content %}
     <!-- ------------------FOOTER--------------------- -->
@@ -78,10 +79,10 @@
 
             <div class="footer_company">
                 <div class="footer-title">Company</div>
-                <div class="footer-child"><a href="#">About us</a></div>
+                <div class="footer-child"><a href="{% url 'shredit:about' %}">About us</a></div>
                 <div class="footer-child"><a href="#">Privacy policies</a></div>
-                <div class="footer-child"><a href="#">Contact us</a></div>
-                <div class="footer-child"><a href="#">FAQs</a></div>
+                <div class="footer-child"><a href="{% url 'shredit:contact' %}">Contact us</a></div>
+                <div class="footer-child"><a href="{% url 'shredit:contact' %}">FAQs</a></div>
             </div>
 
             <div class="footer_developers">

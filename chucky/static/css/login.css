@@ -426,6 +426,7 @@ input[placeholder="Enter your password"]{
     .content{
         padding: 20px;
     }
+}
 
 .success{
     background-color: #00ff0080;

@@ -269,6 +269,7 @@
 .form-condition{
     color:#034c95;
     font-weight: 500;
+    text-decoration: none;
 }
 .btn{
     padding: 0.3125rem 1.25rem;
@@ -398,7 +399,7 @@
 .having-an-account .form-check-label .form-text{
     font-size: 0.75rem;
 }
-
+}
 
 .success{
     background-color: #00ff0080;

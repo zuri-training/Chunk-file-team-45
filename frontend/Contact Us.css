@@ -21,12 +21,14 @@
     /* border: 2px solid red; */
 }
 
-.nav_logo p{
+.nav_logo a{
     font-size: 72px;
     font-weight: 900;
     margin-left: 1.5rem;
     color: #034C95;
+    text-decoration: none;
     /* border: 2px solid red; */
+
 }
 
 .nav_links{
@@ -221,7 +223,7 @@
         height: 40px;
     }
 
-    .nav_logo p{
+    .nav_logo a{
         font-size: 32px;
         margin-left: 0.75rem;
     }
