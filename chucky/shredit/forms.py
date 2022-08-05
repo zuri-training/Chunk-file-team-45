@@ -1,4 +1,5 @@
 from django import forms
+from django.conf import settings
 from django.core.mail import send_mail
 
 
@@ -25,16 +26,15 @@ class ContactForm(forms.Form):
         return msg
 
     def send(self):
-
-	    msg = self.get_info()
-
-	    try:
-	    	send_mail(
-	    		subject='Hello, I need help.',
-	    		message=msg,
-	    		from_email='admin@mail.com',
-				recipient_list=['user@mail.com']
-			)
-	    	return True
-	    except:
-	    	return None 
+        msg = self.get_info()
+        send_mail(subject='Hello, I need help.',message=msg,from_email=settings.EMAIL_HOST_USER,recipient_list=['olaisaiah54@gmail.com',])
+	    # try:
+     #        send_mail(
+     #        subject='Hello, I need help.',
+     #        message=msg,
+     #        from_email=settings.EMAIL_HOST_USER,
+     #        recipient_list=[settings.RECIPIENT_ADDRESS]
+     #        )
+	    # 	return True
+	    # except:
+	    # 	return None 
