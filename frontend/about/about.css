@@ -510,57 +510,7 @@
   text-align: center;
 }
 
-.img-1{
-  background-image: url("../about/Irene\ Ighalo.jpeg");
-}
-.img-2{
-  background-image: url("../about/Ibeh\ Joy\ Chiwendu.jpeg");
-}
-.img-3{
-  background-image: url("../about/Uchendu\ Chigozie\ Idiaka.jpeg");
-}
-.img-4{
-  background-image: url("../about/Junaid\ Omowunmi.jpeg");
-}
-.img-5{
-  background-image: url("../about/Chukwu\ Grace\ Amarachi.jpeg");
-}
-.img-6{
-  background-image: url("../about/Ibe\ Naomi.jpeg");
-}
-.img-7{
-  background-image: url("../about/Olakunle\ Adeosun.jpeg");
-}
-.img-8{
-  background-image: url("../about/Chigozie\ Offor.jpeg");
-}
-.img-9{
-  background-image: url("../about/Williams\ Uche.jpeg");
-}
-.img-10{
-  background-image: url("../about/Uloma\ Nneji.jpeg");
-}
-.img-11{
-  background-image: url("../about/Kanyinsola\ Balogun.jpeg");
-}
-.img-12{
-  background-image: url("../about/Deborah\ Olatona.jpeg");
-}
-.img-13{
-  background-image: url("../about/Ijaola\ Omotayo\ Abigail.jpeg");
-}
-.img-14{
-  background-image: url("../about/Olaoye\ Isaiah.jpeg");
-}
-.img-15{
-  background-image: url("../about/Oyewole\ Oluwafemi\ David.jpeg");
-}
-.img-16{
-  background-image: url("../about/Oshisanya\ Tokunbo\ \'Stunner\'.jpeg");
-}
-.img-17{
-  background-image: url("../about/Adetola\ Adedeji.jpeg");
-}
+
 @media (max-width:1600px) {
   .container{
     width: 100%;
