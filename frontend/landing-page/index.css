@@ -252,6 +252,25 @@ body{
     }
 
 }
+/* **************ALREADY SIGNED IN******************* */
+.already{
+    text-align: right;
+    margin-top: 10px;
+}
+
+.already span{
+    margin-left: 16px;
+}
+
+.already span a{
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 805px){
+    .already{
+        text-align: left;
+    }
+}
 
 /* *****************FIRST MAIN********************* */
 main{
