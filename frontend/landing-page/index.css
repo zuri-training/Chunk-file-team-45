@@ -620,7 +620,7 @@ main{
     text-align: center;
 }
 
-@media only screen and (max-width:1440px){
+@media only screen and (max-width:1726px){
     .use-iota{
         padding: 86px 0 0;
         margin-bottom: 0;
@@ -641,6 +641,32 @@ main{
         justify-content: center;
         align-items: center;
         margin-bottom: 40px;
+    }
+
+    .field-one{
+        padding: 20px;
+    }
+
+    .field-one .title{
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+    }
+
+    .field-one .subtitle{
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .field-one img{
+        margin-bottom: 10px;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .field-one img{
+        width: 260px;
     }
 }
 
@@ -688,7 +714,6 @@ main{
 
 .extend-div{
     background: #FFA1B9;
-    padding: 30px;
     margin-bottom: 40px;
     border-radius: 16px;
     display: flex;
@@ -702,7 +727,6 @@ main{
     padding: 15px 32px 15px 32px;
     width: 450px;
     margin: 20px;
-
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
@@ -749,6 +773,13 @@ main{
     margin-bottom: 165px;
 }
 
+@media only screen and (max-width: 1703px){
+    .testimony-1, .testimony-2, .testimony-3{
+        padding: 15px 20px 15px 20px;
+        width: 350px;
+    }
+}
+
 @media only screen and (max-width: 1440px){
     .testimonial .title{
         font-size: 40px;
@@ -786,6 +817,12 @@ main{
 
     .read-more{
         margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 1273px){
+    .testimony-1, .testimony-2, .testimony-3{
+        width: 300px;
     }
 }
 
