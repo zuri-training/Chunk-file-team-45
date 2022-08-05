@@ -1,0 +1,549 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FDFDFE;
+
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    'A B B B'
+    'A C C F'
+    'A D D G'
+    'A D D I'
+    'A E E H'
+    ;
+    gap: 20px;
+    width:100%;
+    padding: 4%;
+}
+/* sidebar */
+.A{
+    background-color:#B1CAE3;
+    grid-area: A;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(1, 35, 69, 0.1);
+    height: 100%;
+    padding: 50px;
+    width: 330px;
+}
+.B{
+    background-color: #FDFDFE;
+    grid-area: B;
+    border-radius: 10px;
+}
+.C{
+    background-color:  #FAFCFE;
+    grid-area: C;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 120px;
+}
+.D{
+    background-color:  #FAFCFE;
+    grid-area: D;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding-left: 120px;
+    padding-top: 10px;
+    padding-right: 30px;
+}
+.E{
+    background-color:  #FAFCFE;
+    grid-area: E;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 20px;
+}
+.F{
+    background-color:  #FAFCFE;
+    grid-area: F;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(1, 35, 69, 0.2);
+    padding: 20px;
+}
+.G{
+    background-color:  #FAFCFE;
+    grid-area: G;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(1, 35, 69, 0.2);
+    padding: 10px;
+}
+.H{
+    background-color:  #FAFCFE;
+    grid-area: H;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(1, 35, 69, 0.2);
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 40px;
+}
+.I{
+    grid-area: I;
+    padding: 0px 30px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.icon{
+    height: 30px;
+}
+progress{
+    width:250px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+progress::-webkit-progress-bar {
+    border: 0;
+    height: 30px;
+    border-radius: 12px;
+}
+progress::-webkit-progress-value {
+    border: 0;
+    height: 30px;
+    border-radius: 12px;
+}
+progress::-moz-progress-bar {
+    border: 0;
+    height: 30px;
+    border-radius: 12px;
+}
+/* background: */
+progress::-webkit-progress-bar {background-color: #f5b8c7; width: 100%;}
+progress {background-color: #f5b8c7;}
+
+/* value: */
+progress::-webkit-progress-value {background-color: #6B152B !important;}
+progress::-moz-progress-bar {background-color: #6B152B !important;}
+progress {color: #6B152B;}
+.total{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+/* identical to box height */
+
+    text-align: center;
+    font-weight: 500;
+    color: #6B152B;
+}
+#sec-A{
+    list-style: none;
+    display: flex;
+    padding-bottom: 45px;
+}
+#sec-B{
+    list-style: none;
+    display: flex;
+    padding-bottom: 45px;
+    justify-content: center;
+}
+.sec-B{
+   padding-top: 50px;
+}
+.out{
+    color: red;
+}
+.arrow{
+    width: 50%;
+}
+a{
+    text-decoration: none;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+    color: #034C95;
+    font-size: 16px;
+}
+.dashboard{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight:500;
+    
+    color: #034C95;
+    padding-top: 60px;
+}
+.details{
+   color: #034C95;
+   font-family: 'Clash Grotesk', sans-serif;
+   font-weight: 500;
+   padding-top: 40px;
+}
+.details :nth-child(2){
+    padding-top: 10px;
+}
+.list{
+    color: #034C95;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+    padding-top: 30px;
+}
+.signout{
+    color:#034C95;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+}
+.li{
+    height: 15px;
+    padding-right: 10px;
+}
+.li1{
+    height: 25px;
+}
+h1{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+    font-weight: light;
+}
+#text{
+    /* Hello, split those large files here */
+
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+
+   /* IOTA/Primary/primary-900 */
+
+    color: #012345;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    font-weight: lighter;
+}
+.search-files{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    color: #034C95;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 0px 14px 16px;
+    gap: 10px;
+    font-size: 18px;
+    width: 270px;
+    height: 56px;
+
+    /* Neutral/Neutral primary/White primary */
+
+    background: #FDFDFE;
+    /* IOTA/Primary/Main primary */
+
+    border: 1px solid #034C95;
+    border-radius: 8px;
+}
+#text,p{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+}
+.upload{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:150px;
+    color: #012345;
+}
+#up{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+}
+#upload{
+    padding-top: 10px;
+}
+.choose{
+    padding-top: 10px;
+}
+#fieldset{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 8px;
+}
+#choose-file{
+    padding: 10px 0px;
+    width: 130px;
+    text-align: center;
+    background-color:  #FAFCFE;
+    border: 1px solid #034C95;
+    color:#034C95;
+    border-radius: 8px;
+}
+.fieldset{
+    font-size: 14px;
+    color:#6B152B;
+    flex-direction: row;
+    display: flex;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+#cust{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+}
+.customize{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:150px;
+    color: #012345;
+}
+#size{
+    font-family: 'Clash Grotesk';
+}
+.chunk{
+    font-family: 'Clash Grotesk';
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    padding-top: 10px;
+}
+#chun{
+    font-weight: bold;
+    color: #034C95;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border: 1px solid #8BB0D5;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 25px;
+    height: 30px;
+}
+#chunk{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px;
+    width: 120px;
+    height: 30px;
+
+    background: #FFFFFF;
+    /* IOTA/Primary/Main primary */
+
+    border: 1px solid #034C95;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-family: 'Clash Grotesk';
+    text-align: center;
+    margin-bottom: 15px;
+}
+.select{
+    display: flex;
+}
+.custom{
+    padding-top: 10px;
+    white-space: nowrap;
+}
+#form{
+    padding-top: 10px;
+}
+#split{
+    /* Button */
+
+
+/* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 70px;
+    gap: 8px;
+    background: #034C95;
+    border-radius: 16px;
+    border: 1px solid #034C95;
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: large;
+    color: #FDFDFE;
+}
+.split{
+    margin-bottom: 15px;
+}
+#act{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+}
+.recent{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    gap:100px;
+    color: #012345;
+}
+.seven{
+    padding-top: 10px;
+    font-size: small;
+}
+.l2{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.l3{
+    text-align: left;
+    width: 69%;
+}
+.when{
+    text-align: right;
+    width: 30%;
+}
+#view{
+    color: red;
+}
+.view{
+    display: flex;
+    margin-left: 25%;
+    margin-top: 25px;
+}
+.download{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    align-items: center;
+    gap: 120px;
+    color: #012345;
+}
+#all{
+    color: red;
+}
+.download-button{
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+#download-button{
+    padding: 10px 30px;
+    color:  #FAFCFE;
+    border: 1px solid #034C95;
+    background-color:#034C95;
+    border-radius: 8px;
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-size: 16px;
+}
+.files{
+    font-size: 13px;
+    padding-top: 25px;
+    text-align: center;
+}
+.share{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    align-items: center;
+    gap: 150px;
+    color: #012345;
+}
+.link{
+    padding-top: 40px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#link{
+    color: #6B152B;
+    padding: 7px 10px;
+}
+#copy{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+#come{
+    font-family: 'Clash Grotesk', sans-serif;
+    font-weight: 500;
+}
+.soon{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    color: #012345;
+}
+.format{
+    font-size: small;
+    padding-top: 15px;
+    font-weight: light;
+    font-size: 13px;
+    display: flex;
+    white-space: nowrap;
+}
+#ul{
+    padding-bottom: 15px;
+}
+ul{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    align-items: center;
+}
+.mail{
+    font-size: smaller;
+    padding-bottom: 10px;
+}
+#mail{
+    background-color: #E6EEF6;
+    border: 1px solid #E6EEF6;
+    color: #012345;
+    padding: 14px 16px;
+    border-radius: 8px;
+}
+#submit{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    border: 1px solid red;
+    background-color: #FAFCFE;
+    color: red;
+    margin-top: 25px;
+    padding: 7px 50px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+.success{
+    background-color: #00ff0080;
+    border-color: #ebcccc;
+    color: #a94442;
+    align-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.error{
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+    align-content: center;
+    text-align: center;
+    padding: 15px;
+}

@@ -1,16 +1,113 @@
 <!DOCTYPE html>
-<html>
+{% load static %}
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{% block title %}{% endblock title %}</title>
-	{% block css %}
-	{% endblock css %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title  %}{% endblock title  %}</title>
+        
+    {% block css %}{% endblock css %}
+    
+    <!-- -----------------GOOGLE FONT LINKS--------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+
+
+
 </head>
 <body>
-	{% block content %}
-	{% endblock content %}
+    <!-- -----------------HEADER-------------------- -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav_logo">
+                <img src="{% static 'images/logo.svg' %}" alt="iota_logo">
+                <a href="{% url 'shredit:index-page' %}">iOTA</a>
+            </div>
+            
+            <div class="nav_links">
+                <div class="nav_link"><a href="#">About us</a></div>
+                <div class="nav_link"><a href="#">Documentation</a></div>
+                <div class="nav_link"><a href="#">Contact us</a></div>
+                <div class="nav_link"><a href="#">Resources</a></div>
+            </div>
+            
+            {% if not user.is_authenticated %}
+            <div class="nav_signin_signup">
+                <div class="signin"><a href="{% url 'user:user-login' %}">Sign in</a></div>
+                <a href="{% url 'user:user-register' %}">
+                    <button class="btn">Sign up</button>
+                </a>
+            </div>
+            {% endif %}
+    
+            <div class="menu__btn"> 
+                <div class="menu__btn--burger"></div>
+            </div>
+        </nav>
+        
+
+            <!--RESPONSIVE NAV-->
+        <div class="responsive">
+            <div><a href="#">About us</a></div>
+            <div><a href="#">Documentation</a></div>
+            <div><a href="#">Contact us</a></div>
+            <div><a href="#">Resources</a></div>
+            {% if not user.is_authenticated %}
+            <div><a href="{% url 'user:user-login' %}">Sign in</a></div>
+            <div><a href="{% url 'user:user-register' %}">Sign up</a></div>
+            {% endif %}
+        </div>
+    </header>
+        {% include 'messages.html' %}  
+    {% block content %}
+    {% endblock content %}
+    <!-- ------------------FOOTER--------------------- -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="logo_text">
+                <div class="footer_logo">
+                    <img src="{% static 'images/iota_logo_white.svg' %}" alt="iota_logo">
+                    <p>iOTA</p>
+                </div>
+
+                <p class="footer-content">A platform that helps to simplify and make data sorting operations easier, faster, and more efficient by breaking them down into smaller chunks</p>
+            </div>
+
+            <div class="footer_company">
+                <div class="footer-title">Company</div>
+                <div class="footer-child"><a href="#">About us</a></div>
+                <div class="footer-child"><a href="#">Privacy policies</a></div>
+                <div class="footer-child"><a href="#">Contact us</a></div>
+                <div class="footer-child"><a href="#">FAQs</a></div>
+            </div>
+
+            <div class="footer_developers">
+                <div class="footer-title">Developers</div>
+                <div class="footer-child"><a href="#">Documentations</a></div>
+                <div class="footer-child"><a href="#">APIs</a></div>
+            </div>
+
+            <div class="footer_developers">
+                <div class="footer-title">Resources</div>
+                <div class="footer-child footer-letter">How to</div>
+                <div class="footer-child"><a href="#">Split a large Json file</a></div>
+                <div class="footer-child"><a href="#">Deleting duplicates from csv file</a></div>
+                <div class="footer-child last"><a href="#">CSV and Json spliter</a></div>
+            </div>
+        </div>
+
+        <div class="hr_line"></div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                <img src="{% static 'images/copyright.svg' %}" alt="copyright">
+                <p>iOTA team 45 - Made with love for the online community</p>
+            </div>
+        </div>
+    </footer>
 </body>
-	{% block js %}
-	{% endblock js %}
+{% block js %}{% endblock js %}
 </html>

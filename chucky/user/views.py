@@ -1,67 +1,78 @@
 
-from django.shortcuts import render, redirect
-from django import forms
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
+from .forms import UserCreateForm, UserLoginForm
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 
+def register(request):
+    
+    if request.user.is_authenticated:
+        return redirect('shredit:dashboard')
+    
+    form = UserCreateForm()
+    if request.method == 'POST':
+        form = UserCreateForm(request.POST)
+        
+        if not (agree := request.POST.get('agree')):
+            messages.error(request, "You cannot access this platform if you do not agree to terms of services")
+            return render(request, 'user/registration.html', {'form':form})
 
-# Create your views here.
-
-def register_view(request):
-
-    if request.method == 'Post':
-        form = UserCreationForm(request.Post)
         if form.is_valid():
-            User = form.save()
-
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            password2 = form.cleaned_data['password2']
-            User = authenticate(username=username, password=password)
-        if password != password2:
-            messages.error(request, 'Password doesn\'t match')
-            return redirect('registration.html')
-        elif User.objects.filter(username=username.exists()):
-            messages.error(request, 'Username already exist')
+            email = form.cleaned_data['email']
+            
+            user = User.objects.create_user(
+                            username=username,
+                            password=password,
+                            email=email
+                            )
+            messages.success(request, 'Registration Successful')
+            
+            login(request, user)
+            return redirect('shredit:dashboard')
+
         else:
-            User = User.objects.get(username)
-            User.set_password(password)
-            User = form.save()
+            messages.error(request, "An error occurred during registration")
 
-        login(request, User)
-        messages.success(request, 'Registration Successful')
-        return redirect('home.html')
+    context = {'form':form}
 
-    else:
-        form = UserCreationForm()
+    return render(request, 'user/registration.html', context)
 
-    return render(request, 'registration.html', {form: forms})
+def signin_view(request):
 
+    if request.user.is_authenticated:
+        return redirect('shredit:dashboard')
 
-def login_view(request):
+    form = UserLoginForm()
+    
+    if request.method == 'POST':
+        form = UserLoginForm(request.POST)
 
-    if request.method == 'Post':
-        username = request.Post['username']
-        password = request.Post['password']
-        User = authenticate(request, username=username, password=password)
+        if form.is_valid():
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password")
 
-        if User is not None:
-            login(request,User)
-            return redirect('home.html')
-        else:
-            messages.error(request, 'Invalid Username or Password')
-            return redirect('login.html')
+            user = authenticate(request, username=username, password=password)
 
-    else:
-        return render(request, 'login.html')
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    messages.success(request, 'Login was successful')
+                    return redirect('shredit:dashboard')
+            
+            else:
+                messages.error(request, 'Invalid Credentials')
+                return redirect('user:user-login')
+        
+    context = {'form':form}
+    return render(request, 'user/login.html', context)
 
-
-def logout_view(request):
+@login_required(login_url='/author/login/')
+def signout_view(request):
     logout(request)
     messages.success(request, 'You logged out' )
-    return redirect('index.html')
-
-def home(request):
-    return render (request, 'home.html')
+    return redirect('shredit:index-page')
