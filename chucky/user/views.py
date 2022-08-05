@@ -18,7 +18,7 @@ def register(request):
         
         if not (agree := request.POST.get('agree')):
             messages.error(request, "You cannot access this platform if you do not agree to terms of services")
-            return render(request, 'user/registration.html', {'form':form})
+            return redirect('user:user-register')
 
         if form.is_valid():
             username = form.cleaned_data['username']

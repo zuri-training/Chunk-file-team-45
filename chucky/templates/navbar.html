@@ -5,13 +5,13 @@
     <nav class="nav">
         <div class="nav_logo">
             <img src="{% static 'images/logo.svg' %}" alt="iota_logo">
-            <p>iOTA</p>
+            <a href="{% url 'shredit:index-page' %}">iOTA</a>
         </div>
         
         <div class="nav_links">
-            <div class="nav_link"><a href="#">About us</a></div>
+            <div class="nav_link"><a href="{% url 'shredit:about' %}">About us</a></div>
             <div class="nav_link"><a href="#">Documentation</a></div>
-            <div class="nav_link"><a href="#">Contact us</a></div>
+            <div class="nav_link"><a href="{% url 'shredit:contact' %}">Contact us</a></div>
             <div class="nav_link"><a href="#">Resources</a></div>
         </div>
 
@@ -32,9 +32,9 @@
 
             <!--RESPONSIVE NAV-->
         <div class="responsive">
-            <div><a href="#">About us</a></div>
+            <div><a href="{% url 'shredit:about' %}">About us</a></div>
             <div><a href="#">Documentation</a></div>
-            <div><a href="#">Contact us</a></div>
+            <div><a href="{% url 'shredit:contact' %}">Contact us</a></div>
             <div><a href="#">Resources</a></div>
             {% if not user.is_authenticated %}
             <div><a href="{% url 'user:user-login' %}">Sign in</a></div>
