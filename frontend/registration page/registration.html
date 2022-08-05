@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="./registration.css">    
+<link rel="stylesheet" href="registration.css">    
 
 <title>registration</title>
 </head>
@@ -69,24 +69,28 @@
                     </div>
                     
                     <div class="form">
-                        <form action="">
-                            <div class="mb-3">
+                        <form action="" id="form">
+                            <div class="mb-3 input-control">
                                 <label for="Username" class="form-label">Username<sup class="Asterisks">*</sup></label>
                                 <input type="text" placeholder="enter your username" class="form-control" id="username">
+                                <div class="error"></div>
                             </div>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 input-control">
                                 <label for="email" class="form-label">Email address <sup class="Asterisks">*</sup></label>
-                                <input type="email" placeholder="enter your email address" class="form-control" id="emailaddress" aria-describedby="emailHelp">
+                                <input type="email" placeholder="enter your email address" class="form-control" id="email" aria-describedby="emailHelp">
+                                <div class="error"></div>
                             </div>
                             
-                            <div class="mb-3">
+                            <div class="mb-3 input-control">
                                 <label for="Password" class="form-label">Password <sup class="Asterisks">*</sup></label>
                                 <input type="password" placeholder = "create a password"class="form-control" id="password">
+                                <div class="error"></div>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 input-control">
                                 <label for="Password" class="form-label">Confirmed Password <sup class="Asterisks">*</sup></label>
-                                <input type="password" placeholder = "create a password"class="form-control" id="password">
+                                <input type="password" placeholder = "create a password"class="form-control" id="password1">
+                                <div class="error"></div>
                             </div>
                             <div id="emailHelp" class="form-text">must be atleast eight characters
                             </div>

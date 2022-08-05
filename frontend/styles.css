@@ -20,12 +20,11 @@
     /* border: 2px solid red; */
 }
 
-.nav_logo a{
+.nav_logo p{
     font-size: 72px;
     font-weight: 900;
     margin-left: 1.5rem;
     color: #034C95;
-    text-decoration: none;
     /* border: 2px solid red; */
 }
 
@@ -84,6 +83,7 @@
     cursor: pointer;
     background: #012345;;
 }
+
 
 /* TOGGLE BUTTON CODE */
 
@@ -209,94 +209,7 @@
     opacity:0;
   }
 }
-
-.form-body{
-    width: 100%;
-    height: 80vh;
-}
-.form-details{
-    margin: 0.625rem 1.875rem;
-    background-color: #F4F7FB;
-    border-radius: 1rem;;
-}
-.form-info{
-    padding:1.25rem 11.875rem;
-}
-.form-welcome-details{
-    margin-top: 1.25rem;
-}
-.form{
-    width: 80%;
-    margin-top: 1.875rem;
-}
-.form-welcome-details h3{
-    color:#034c95;
-    font-weight: 600;
-    font-size: 2.5rem;
-}
-.form-welcome-details .create-account{
-    color: #616467;
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-.form-welcome-details .google-sign-up{
-    padding: 0.25rem 0.625rem;
-    color: #e82e5d;
-    border:1px solid #e82e5d;
-    border-radius: 0.625rem;
-    font-weight: 500;
-    font-size: 1.5rem ;
-}
-.Asterisks{
-    color: #e82e5d;
-}
-.form-label{
-    color: #1b1b1b;
-    font-weight: 500;
-    font-size: 1.5rem;
-}
-.form-control{
-    color: #616467;
-    font-size: 1.25rem;
-}
-.form-check-label{
-    font-size: 1rem;
-}
-.having-an-account{
-    font-size: 1rem;
-}
-.form-condition{
-    color:#034c95;
-    font-weight: 500;
-}
-.btn{
-    padding: 0.3125rem 1.25rem;
-    background-color: #034c95;
-    font-size: 1.25rem;
-    color: #fff;
-}
-.btn:hover{
-    color: #034c95;
-    font-weight: 600;
-}
-/* form validation css code */
-.input-control.success input {
-    border-color: #09c372;
-}
-
-.input-control.error input {
-    border-color: #ff3860;
-}
-
-.input-control .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
-}
-
-
-/* responsive CSS */
-
+  
 @media only screen and (max-width: 1430px){
     .nav{
         padding: 24px 12px;
@@ -307,7 +220,7 @@
         height: 40px;
     }
 
-    .nav_logo a{
+    .nav_logo p{
         font-size: 32px;
         margin-left: 0.75rem;
     }
@@ -338,82 +251,149 @@
 
 }
 
-/* SIGN UP MEDIA QUERY */
-@media (min-width:700px) and (max-width:1000px) {
-    .form{
-        width: 85%;
 
+/* ****************FOOTER************************ */
+.footer{
+    background: #034C95;
+    padding: 56px 80px;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 88px;
+}
+
+.footer-content{
+    color: #FDFDFE;
+    font-size: 24px;
+    line-height: 30px;
+    width: 382px;
+    margin-bottom: 172px;
+}
+
+.footer_logo p{
+    font-size: 72px;
+    font-weight: 900;
+    color: #FDFDFE;
+    margin-left: 24px;
+}
+
+.footer-title{
+    color: #E82E5D;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 64px;
+}
+
+.footer-child{
+    color:#FFFFFF;
+    font-size: 32px;
+    margin-bottom: 32px;
+
+}
+
+.footer-child a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.last{
+    margin-bottom: 74px;
+}
+
+.hr_line{
+    border-bottom: 2px solid #E82E5D;
+    margin-bottom: 53px;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom img{
+    color: #FDFDFE;
+}
+
+.footer-bottom p{
+    font-size: 28px;
+    font-weight: 500;
+    color: #FDFDFE;
+    margin-left: 16px;
+}
+
+@media only screen and (max-width:1440px){
+    .footer_logo{
+        margin-bottom: 40px;
     }
-    .form-welcome-details h3{
-        font-size: 1.5rem;
+    .footer_logo img{
+        width: 40px;
+        height: 40px;
     }
-    .form-welcome-details .create-account{
-        font-size: 1.20rem;
+
+    .footer_logo p{
+        font-size: 32px;
     }
-    .form-welcome-details .google-sign-up{
-        font-size: 1rem ;
+
+    .footer-content{
+        font-size: 16px;
+        width: 172px;
     }
-    .form-label{
-        font-size: 1.25rem;
+
+    .footer-title{
+        font-size: 24px;
     }
-    .form-check-label{
-        font-size: 0.75rem;
+
+    .footer-child{
+        font-size: 16px;
     }
-    .form-control{
-        font-size: 1rem;
+
+    .copyright p{
+        font-size: 20px;
     }
-   
-    .btn{
-        font-size: 1rem;
-       
+}
+
+@media only screen and (max-width:805px){
+    .footer-top{
+        flex-direction: column;
+        justify-content: space-between;
     }
     
-}
-@media screen and (max-width:699px){
-.form-details{
-    margin:0.3125rem 3.75rem;
+    .footer_logo img{
+        width: 32px;
+        height: 32px;
+    }
 
-}
-.form-info{
-    padding:0.3125rem 0.9375rem;
-}
-.form-welcome-details{
-    margin: 0.3125rem 3rem ;
-}
-.form{
-    width: 70%;
-    margin: 0.625rem 3rem ;
-}
-.form-welcome-details h3{
-    font-size: 1.5rem;
-}
-.form-welcome-details .create-account{
-   font-size: 1rem;
-}
-.form-welcome-details .google-sign-up{
-    padding: 0.125rem 0.3125rem;
-    font-size: 1rem;
-}
+    .footer_logo p{
+        font-size: 24px;
+        width: 100%;
+    }
 
-.form-label{
-    font-size: 1rem;
-    
-}
-.form-control{
-    color: #616467;
-    font-size: 0.75rem;
-}
+    .footer-content{
+        font-size: 16px;
+        width: 80%;
+        margin-bottom: 16px;
+    }
 
-.btn{
-    padding: 0.3125rem 2.5rem;
-    font-size: 1rem;
+    .footer-title{
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .footer-child{
+        font-size: 16px;
+    }
+
+    .copyright p{
+        font-size: 12px;
+    }
+    .copyright img{
+        width: 16px;
+    }
 }
-
-.having-an-account .form-check-label .form-text{
-    font-size: 0.75rem;
-}
-
-  
-}
-
-

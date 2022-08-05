@@ -85,6 +85,7 @@
     background: #012345;;
 }
 
+
 /* TOGGLE BUTTON CODE */
 
 .menu__btn{
@@ -268,6 +269,7 @@
 .form-condition{
     color:#034c95;
     font-weight: 500;
+    text-decoration: none;
 }
 .btn{
     padding: 0.3125rem 1.25rem;
@@ -279,21 +281,6 @@
     color: #034c95;
     font-weight: 600;
 }
-/* form validation css code */
-.input-control.success input {
-    border-color: #09c372;
-}
-
-.input-control.error input {
-    border-color: #ff3860;
-}
-
-.input-control .error {
-    color: #ff3860;
-    font-size: 9px;
-    height: 13px;
-}
-
 
 /* responsive CSS */
 
@@ -412,8 +399,22 @@
 .having-an-account .form-check-label .form-text{
     font-size: 0.75rem;
 }
-
-  
 }
 
+.success{
+    background-color: #00ff0080;
+    border-color: #ebcccc;
+    color: #a94442;
+    align-content: center;
+    text-align: center;
+    padding: 15px;
+}
 
+.error{
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+    align-content: center;
+    text-align: center;
+    padding: 15px;
+}
