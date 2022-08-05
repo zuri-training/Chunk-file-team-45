@@ -22,7 +22,7 @@ def contact_us(request):
 
         if contact_form.is_valid():
             sent = contact_form.send()
-
+            print(sent)
             if sent is not None:
                 messages.success(request, 'Message sent successfully')
                 return redirect('shredit:contact')
