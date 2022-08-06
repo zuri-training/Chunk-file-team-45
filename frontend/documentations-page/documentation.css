@@ -1,0 +1,633 @@
+/* ************HEADER CSS******************* */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px;
+    background: #E6EEF6;
+}
+
+.nav_logo{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.nav_logo a{
+    font-size: 72px;
+    font-weight: 900;
+    margin-left: 1.5rem;
+    color: #034C95;
+    text-decoration: none;
+    /* border: 2px solid red; */
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_link{
+    font-size: 32px;
+    margin: 2rem;
+}
+
+.nav_link a{
+    text-decoration: none;
+    color: #012345;
+}
+
+.nav_link a:hover{
+    color: #034C95;
+}
+
+.nav_signin_signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin a{
+    text-decoration: none;
+    color: #E82E5D;
+    font-size: 24px;
+    margin-right: 3.3rem;
+}
+
+.signin a:hover{
+    color: #034C95;
+}
+
+.btn {
+    -webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    border-radius: 16px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #034C95;
+    border:#034C95;
+    padding: 16px 24px 16px 24px;
+    text-decoration: none;
+}
+  
+.btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background: #012345;;
+}
+
+
+/* TOGGLE BUTTON CODE */
+
+.menu__btn{
+    position: relative;
+    top: -.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:4vh;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    display: none;
+    padding: 2rem 0;
+}
+  
+.menu__btn--burger{
+    width: 40px;
+    height: 4px;
+    background-color: #034C95;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu__btn--burger::before{
+    content:"";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #034C95;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transform: translateY(-15px);
+}
+
+.menu__btn--burger::after{
+    content:"";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #034C95;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transform: translateY(15px)
+}
+  
+  
+.responsive{
+    /* border: 2px solid black; */
+    display: none;
+    
+}
+
+.responsive div{
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #E6EEF6;
+    /* border-bottom: 2px solid black; */
+    cursor: pointer;
+    color: #034C95;
+    font-size: 1.3rem;
+}
+
+.responsive a{
+    text-decoration: none;
+    color: #034C95;
+}
+
+.responsive div:hover{
+    font-size: 1.6rem;
+    background-color: #fff;
+    
+}
+  
+.responsiveBlock{
+    display:block;
+    animation: reappear 0.5s linear reverse;
+}
+  
+  
+  
+/* ANIMATION */
+/* nav section menu__btn */
+
+.menu__btn.open .menu__btn--burger{
+    transform: scaleX(-20px);
+    background: transparent; 
+}
+
+.menu__btn.open .menu__btn--burger::before{
+    transform: rotate(45deg) ;
+}
+
+.menu__btn.open .menu__btn--burger::after{
+    transform: rotate(-45deg) ;
+}
+
+/* menuDropdown */
+@keyframes reappear {
+  0%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  25%{
+    transform:translateX(25%);
+    opacity:0.8;
+  }
+
+  50%{
+    transform:translateX(50%);
+    opacity:0.5;
+  }
+
+  75%{
+    transform:translateX(75%);
+    opacity: 0.25;
+  }
+
+  100%{
+    transform:translateX(150%);
+    opacity:0;
+  }
+}
+  
+@media only screen and (max-width: 1430px){
+    .nav{
+        padding: 24px 12px;
+    }
+    .nav_logo img{
+        /* border: 2px solid red; */
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav_logo a{
+        font-size: 32px;
+        margin-left: 0.75rem;
+    }
+
+    .nav_link{
+        font-size: 20px;
+        margin: 0.75rem;
+    }
+
+    .signin a{
+        text-decoration: none;
+        color: #E82E5D;
+        font-size: 20px;
+        margin-right: 0.83rem;
+    }
+}
+@media only screen and (max-width:830px) {
+    .nav{
+        padding: 8px 20px;
+    }
+    .menu__btn{
+        display: block;
+    }
+
+    .nav_links, .nav_signin_signup{
+        display: none;
+    }
+
+}
+/* ***********Documentations Page******** */
+main{
+    padding-left: 77px;
+    padding-right: 175px;
+}
+
+/* **********INTRO********** */
+.doc-content-head{
+    margin-top: 64px;
+    margin-bottom: 54px;
+}
+
+.doc-content-head .title{
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 69px;
+    margin-bottom: 22px;
+}
+
+.doc-content-head .body{
+    font-size: 40px;
+    line-height: 49px;
+    width: 80%;
+    color: #012345;
+}
+
+/* ************TABLE OF CONTENTS************* */
+.table-of-contents{
+    margin-bottom: 96px;
+}
+
+.table-of-contents p{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    color: #012345;
+    margin-bottom: 28px;
+}
+
+.table-of-contents ul{
+    padding-left: 50px;
+}
+
+.table-of-contents li{
+    margin-bottom: 16px;
+}
+
+.table-of-contents a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #034C95;
+}
+
+/* *************WHAT IS IOTA**************** */
+.whats-iota{
+    margin-bottom: 56px;
+}
+
+.whats-iota .title{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #034C95;
+    margin-bottom: 32px;
+}
+
+.whats-iota .body{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    color: #012345;
+}
+
+/* **************GET STARTED******************* */
+.get-started{
+    margin-bottom: 56px;
+}
+
+.get-started .title{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #034C95;
+    margin-bottom: 32px;
+}
+
+.get-started .body-1,
+.get-started .body-2,
+.get-started ul,
+.get-started .body-3{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    color: #012345;
+}
+
+.get-started ul{
+    padding-left: 70px;
+}
+
+/* ***************HOW IT WORKS***************** */
+.how-it-works .title{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    color: #034C95;
+}
+
+.batch-1, .batch-2, .batch-3, .batch-4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.batch-1 div,
+.batch-4 div{
+    margin-left: 160px;
+}
+
+.batch-1 .title,
+.batch-2 .title,
+.batch-3 .title,
+.batch-4 .title{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #034C95;
+}
+
+.batch-1 .body,
+.batch-2 .body,
+.batch-3 .body,
+.batch-4 .body{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #012345;
+}
+
+
+.batch-2 div,
+.batch-3 div{
+    margin-right: 160px;
+}
+
+.batch-4{
+    margin-bottom: 96px;
+}
+
+/* ********************ABOUT PLATFORM***************** */
+.about-platform .title{
+    margin-bottom: 54px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 59px;
+    color: #034C95;
+}
+
+.about-platform .body{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    color: #012345;
+}
+
+.about-platform ul{
+    padding-left: 70px;
+}
+
+.about-platform{
+    margin-bottom: 56px;
+}
+
+/* ***************DOC IMAGE*********************** */
+.doc-image{
+    margin-bottom: 56px;
+    font-size: 48px;
+    line-height: 59px;
+    color: #B52448;
+}
+
+.doc-image p{
+    margin-bottom: 64px;
+}
+
+.doc-image img{
+    margin-bottom: 96px;
+}
+
+/* *****************WHY IOTA*************************** */
+.why-iota .title{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: #034C95;
+    margin-bottom: 24px;
+}
+
+.why-iota ul{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    color: #012345;
+    margin-bottom: 96px;
+    padding-left: 70px;
+}
+
+.questions .body-1{
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    color: #6B152B;
+    margin-bottom: 32px;
+}
+.questions .body-1 a{
+    text-decoration: none;
+    color: #E82E5D;
+}
+
+.questions .body-2{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    color: #034C95;
+    margin-bottom: 200px;
+}
+
+
+/* ****************FOOTER************************ */
+.footer{
+    background: #034C95;
+    padding: 56px 80px;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 88px;
+}
+
+.footer-content{
+    color: #FDFDFE;
+    font-size: 24px;
+    line-height: 30px;
+    width: 382px;
+    margin-bottom: 172px;
+}
+
+.footer_logo p{
+    font-size: 72px;
+    font-weight: 900;
+    color: #FDFDFE;
+    margin-left: 24px;
+}
+
+.footer-title{
+    color: #E82E5D;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 64px;
+}
+
+.footer-child{
+    color:#FFFFFF;
+    font-size: 32px;
+    margin-bottom: 32px;
+
+}
+
+.footer-child a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.last{
+    margin-bottom: 74px;
+}
+
+.hr_line{
+    border-bottom: 2px solid #E82E5D;
+    margin-bottom: 53px;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom img{
+    color: #FDFDFE;
+}
+
+.footer-bottom p{
+    font-size: 28px;
+    font-weight: 500;
+    color: #FDFDFE;
+    margin-left: 16px;
+}
+
+@media only screen and (max-width:1440px){
+    .footer_logo{
+        margin-bottom: 40px;
+    }
+    .footer_logo img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer_logo p{
+        font-size: 32px;
+    }
+
+    .footer-content{
+        font-size: 16px;
+        width: 172px;
+    }
+
+    .footer-title{
+        font-size: 24px;
+    }
+
+    .footer-child{
+        font-size: 16px;
+    }
+
+    .copyright p{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:805px){
+    .footer-top{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .footer_logo img{
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer_logo p{
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .footer-content{
+        font-size: 16px;
+        width: 80%;
+        margin-bottom: 16px;
+    }
+
+    .footer-title{
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .footer-child{
+        font-size: 16px;
+    }
+
+    .copyright p{
+        font-size: 20px;
+    }
+
+    .copyright p{
+        font-size: 12px;
+    }
+    .copyright img{
+        width: 16px;
+    }
+}
