@@ -56,7 +56,7 @@ function setErrorFor(input, message) {
   small.innerText = message;
 
   //Display the error class
-  formControl.className = "form-control error";
+  formControl.className = "form-control errors";
 }
 
 function setSuccessFor(input) {

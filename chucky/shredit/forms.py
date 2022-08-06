@@ -5,9 +5,10 @@ from django.core.mail import send_mail
 
 class ContactForm(forms.Form):
 
-    name = forms.CharField(max_length=120, label='Name',required=True)
+    name = forms.CharField(max_length=120, label='Name', required=True)
     email = forms.EmailField(label='Email', required=True)
-    message = forms.CharField(widget=forms.Textarea, label='Message', required=True)
+    message = forms.CharField(widget=forms.Textarea,
+                              label='Message', required=True)
 
     def get_info(self):
         """
@@ -27,14 +28,13 @@ class ContactForm(forms.Form):
 
     def send(self):
         msg = self.get_info()
-        send_mail(subject='Hello, I need help.',message=msg,from_email=settings.EMAIL_HOST_USER,recipient_list=['olaisaiah54@gmail.com',])
-	    # try:
-     #        send_mail(
-     #        subject='Hello, I need help.',
-     #        message=msg,
-     #        from_email=settings.EMAIL_HOST_USER,
-     #        recipient_list=[settings.RECIPIENT_ADDRESS]
-     #        )
-	    # 	return True
-	    # except:
-	    # 	return None 
+        try:
+            send_mail(
+                subject="Hello, I need help.",
+                message=msg,
+                from_email='admin@mail.com',
+                recipient_list=['olaisaiah54@gmail.com', ]
+            )
+            return True
+        except:
+            return None

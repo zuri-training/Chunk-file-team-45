@@ -470,19 +470,20 @@ p{
 }
 
 .success{
-    background-color: #00ff0080;
+    background-color: #09c372;
     border-color: #ebcccc;
-    color: #a94442;
+    color: #231212;
     align-content: center;
     text-align: center;
     padding: 15px;
 }
 
 .error{
-    background-color: #f2dede;
+    background-color: #ff3860;
     border-color: #ebcccc;
-    color: #a94442;
+    color: #231212;
     align-content: center;
     text-align: center;
     padding: 15px;
 }
+

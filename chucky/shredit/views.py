@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+
 from django.contrib import messages
 from .forms import ContactForm
 
@@ -6,7 +8,8 @@ from .forms import ContactForm
 
 def index(request):
     return render(request, 'shredit/index.html')
-
+    
+@login_required(login_url='/author/login/')
 def home(request):
     return render(request, 'shredit/homepage.html')
 

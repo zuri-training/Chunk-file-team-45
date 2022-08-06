@@ -27,21 +27,23 @@
     <br>
     <br>
 
-    <form method="POST">
-        <p>
-            Username<i class="fa-light fa-asterisk" style="color:#E82E5D;"></i>
-        </p>
-        <label for="id_username"></label>
-        <input type="text" class="details" name="username" placeholder="Enter your username" 
-        id='id_username' required>
-        {{ form.username.errors }}
+    <form class="form" id="form" method="POST">
+        <div class="form-control">    
+            <label for="id_username">Username<i class="fa-light fa-asterisk" style="color:#E82E5D;"></i></label><br>    
+            <input type="text" class="details" name="username" placeholder="Enter your username"id='id_username' required><i class="fas fa-exclamation-circle"></i>
+            <small> Error Message</small>
+            {{ form.username.errors }}
+        </div>
         <br>
         <br>
-        <p>
-            Password<i class="fa-light fa-asterisk" style="color:#E82E5D;"></i>
-        </p>
-        <label for="id_password"></label>
-        <input type="password" class="details" name="password" placeholder="Enter your password" id="id_password">
+
+        <div class="form-control">
+            <label for="id_password">Password<i class="fa-light fa-asterisk" style="color:#E82E5D;"></i></label><br>
+            <input type="password" class="details" name="password" placeholder="Enter your password" id="id_password"><i class="fas fa-exclamation-circle"></i>
+            <small> Error Message</small>
+        </div>
+        <br>
+        <br>
         <div class="checkbox">
             <div>
                 <input type="checkbox" name="checkbox" id="checkbox">

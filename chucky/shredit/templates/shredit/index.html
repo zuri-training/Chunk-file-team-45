@@ -13,6 +13,10 @@
 {% block content %}
     <!-- -----------------MID SECTION------------------------- -->
     <main>
+        <section class="already">
+            <p>Already signed in? <span id="dashboard" class="signin">
+                <a href="{% url 'shredit:dashboard' %}">Go to dashboard</a></span></p>
+        </section>
         <section class="first-main">
             <div class="first-main-content">
                 <div class="bold-text">
@@ -26,18 +30,19 @@
                 </div>
         
                 <div class="buttons">
-                    <button class="btn">Sign up</button>
+                    <a href="{% url 'user:user-register' %}"><button class="btn">Sign up</button></a>
                     <button class="btn btn-color">Learn more</button>
                 </div>
     
                 <div class="additional-info">
                     <p class="info-1"><img src="{% static 'images/tick-circle.svg' %}" alt="tick-circle"> <span>No credit card</span></p>
-                                                        
+    
                     <p class="info-2"><img src="{% static 'images/tick-circle.svg' %}" alt="tick-circle"><span>Free  forever</span></p>
                 </div>
             </div>
             
             <div class="first-main-image">
+
                 <img src="{% static 'images/amico.svg' %}" alt="iota-image-description">
             </div>
     
@@ -106,6 +111,7 @@
                 <div class="testimony-1">
                     <p class="testimony">iOTA has helped us become better time managers despite being a free tool. We are able to keep track of orders since our large file has been splitted to smaller bits</p>
                     <div class="testimony-image">
+
                         <img src="{% static 'images/star.svg' %}" alt="Star">
                         <img src="{% static 'images/star.svg' %}" alt="Star">
                         <img src="{% static 'images/star.svg' %}" alt="Star">
