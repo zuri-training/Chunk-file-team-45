@@ -1,0 +1,339 @@
+/* ************HEADER CSS******************* */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body{
+    max-width: 100%;
+    min-height: 100vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Clash Grotesk', sans-serif;
+    background-color: #fff;
+}
+
+.nav{
+    font-family: 'Clash Grotesk', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px;
+    background: #E6EEF6;
+}
+
+.nav_logo{
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.nav_logo p{
+    font-size: 72px;
+    font-weight: 900;
+    margin-left: 1.5rem;
+    color: #034C95;
+    /* border: 2px solid red; */
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_link{
+    font-size: 32px;
+    margin: 2rem;
+}
+
+.nav_link a{
+    text-decoration: none;
+    color: #012345;
+}
+
+.nav_link a:hover{
+    color: #034C95;
+}
+
+.nav_signin_signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin a{
+    text-decoration: none;
+    color: #E82E5D;
+    font-size: 24px;
+    margin-right: 3.3rem;
+}
+
+.signin a:hover{
+    color: #034C95;
+}
+
+.btn {
+    -webkit-border-radius: 16;
+    -moz-border-radius: 16;
+    border-radius: 16px;
+    font-family: inherit;
+    color: #ffffff;
+    font-size: 20px;
+    background: #034C95;
+    border:#034C95;
+    padding: 16px 24px 16px 24px;
+    text-decoration: none;
+}
+  
+.btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background: #3575B6;
+}
+
+
+/* TOGGLE BUTTON CODE */
+
+.menu__btn{
+    position: relative;
+    top: -.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:4vh;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    display: none;
+    padding: 2rem 0;
+}
+  
+.menu__btn--burger{
+    width: 40px;
+    height: 4px;
+    background-color: #034C95;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu__btn--burger::before{
+    content:"";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #034C95;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transform: translateY(-15px);
+}
+
+.menu__btn--burger::after{
+    content:"";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #034C95;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    transform: translateY(15px)
+}
+  
+  
+.responsive{
+    /* border: 2px solid black; */
+    display: none;
+    
+}
+
+.responsive div{
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #E6EEF6;
+    /* border-bottom: 2px solid black; */
+    cursor: pointer;
+    color: #034C95;
+    font-size: 1.3rem;
+}
+
+.responsive a{
+    text-decoration: none;
+    color: #034C95;
+}
+
+.responsive div:hover{
+    font-size: 1.6rem;
+    background-color: #fff;
+    
+}
+  
+.responsiveBlock{
+    display:block;
+    animation: reappear 0.5s linear reverse;
+}
+  
+  
+  
+/* ANIMATION */
+/* nav section menu__btn */
+
+.menu__btn.open .menu__btn--burger{
+    transform: scaleX(-20px);
+    background: transparent; 
+}
+
+.menu__btn.open .menu__btn--burger::before{
+    transform: rotate(45deg) ;
+}
+
+.menu__btn.open .menu__btn--burger::after{
+    transform: rotate(-45deg) ;
+}
+
+/* menuDropdown */
+@keyframes reappear {
+  0%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  25%{
+    transform:translateX(25%);
+    opacity:0.8;
+  }
+
+  50%{
+    transform:translateX(50%);
+    opacity:0.5;
+  }
+
+  75%{
+    transform:translateX(75%);
+    opacity: 0.25;
+  }
+
+  100%{
+    transform:translateX(150%);
+    opacity:0;
+  }
+}
+  
+@media only screen and (max-width: 1430px){
+    .nav{
+        padding: 24px 12px;
+    }
+    .nav_logo img{
+        /* border: 2px solid red; */
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav_logo p{
+        font-size: 32px;
+        margin-left: 0.75rem;
+    }
+
+    .nav_link{
+        font-size: 20px;
+        margin: 0.75rem;
+    }
+
+    .signin a{
+        text-decoration: none;
+        color: #E82E5D;
+        font-size: 20px;
+        margin-right: 0.83rem;
+    }
+}
+@media only screen and (max-width:830px) {
+    .nav{
+        padding: 8px 20px;
+    }
+    .menu__btn{
+        display: block;
+    }
+
+    .nav_links, .nav_signin_signup{
+        display: none;
+    }
+
+}
+
+
+/* BODY CONTENTS */
+
+p{
+    color: black;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+
+.layer{
+    background-color: #F4F7FB;
+    font-family: inherit;
+    height: 100vh;
+    margin: 30px;
+    padding: 100px;
+}
+
+.form-control{
+    width: 350px;
+}
+
+input{
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #034C95;
+    border-radius: 7px;
+}
+
+input[placeholder = "Email address"]{
+    font-family: inherit;
+    font-size: 16px;
+}
+
+
+button{
+    padding: 10px;
+    border: 1px solid #0353A4;
+    background-color: #0353A4;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 16px;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #3575B6;
+    border: 1px solid #3575B6;
+}
+
+@media only screen and (max-width: 480px) {
+    .layer{
+        padding: 55px;
+    }
+    
+    .form-control{
+        width: 200px;
+    }
+
+    input{
+        width: 70%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
