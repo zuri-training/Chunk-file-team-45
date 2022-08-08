@@ -1,5 +1,6 @@
 <h1>Kanyinsola Balogun</h1>
 <h2>Product Designer</h2>
+<h3>Issue resolved</h3>
 <ol>
    <li> Wrote the research plan used by product designers </li>
    <li> Used screener questions made by a team member to eliminat participants who weren't appropriate for our study </li> https://github.com/zuri-training/Chunk-file-team-45/issues/26
