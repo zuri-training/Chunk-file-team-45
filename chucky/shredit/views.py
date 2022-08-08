@@ -35,3 +35,10 @@ def contact_us(request):
 
     context = {'form':contact_form}
     return render(request, 'shredit/contact.html', context)
+
+
+def test_page(request):
+    form = FileUploadForm()
+
+    context = {'form': form}
+    return render(request, 'shredit/about.html', context)

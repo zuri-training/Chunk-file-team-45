@@ -38,3 +38,19 @@ class ContactForm(forms.Form):
             return True
         except:
             return None
+
+
+class FileUploadForm(forms.Form):
+
+    SIZE_TYPE = (
+        ("KB", "KB"),
+        ("MB", "MB")
+    )
+
+    file = forms.FileField()
+    size_type = forms.MultipleChoiceField(
+        required=True,
+        widget=forms.CheckboxSelectMultiple,
+        choices=SIZE_TYPE,
+    )
+    chunk_num = forms.IntegerField()
