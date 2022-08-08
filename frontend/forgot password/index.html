@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot password</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- -----------------FONT LINK--------------------------- -->
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!-- -----------------HEADER-------------------- -->
+        <header class="header">
+            <nav class="nav">
+                <div class="nav_logo">
+                    <img src="logo.svg" alt="iota_logo">
+                    <p>iOTA</p>
+                </div>
+            
+                <div class="nav_links">
+                    <div class="nav_link"><a href="#">About us</a></div>
+                    <div class="nav_link"><a href="#">Documentation</a></div>
+                    <div class="nav_link"><a href="#">Contact us</a></div>
+                    <div class="nav_link"><a href="#">Resources</a></div>
+                </div>
+    
+                <div class="nav_signin_signup">
+                    <div class="signin"><a href="#">Sign in</a></div>
+                    <button class="btn">Sign up</button>
+                </div>
+    
+                <div class="menu__btn"> 
+                    <div class="menu__btn--burger"></div>
+                </div>
+            </nav>
+        
+
+            <!--RESPONSIVE NAV-->
+            <div class="responsive">
+                <div><a href="#">About us</a></div>
+                <div><a href="#">Documentation</a></div>
+                <div><a href="#">Contact us</a></div>
+                <div><a href="#">Resources</a></div>
+                <div><a href="#">Sign in</a></div>
+                <div><a href="#">Sign up</a></div>
+            </div>
+        </header>
+
+        <div class="layer">
+            <h2 style="color: #0353A4;
+            ">Forgot password?</h2><br>
+            <p>We would send you a link to reset your password</p><br><br>
+
+
+            <form class="form-control" id="form">
+                <div class="field">
+                    <label>Email</label><br>
+                    <input type="email" placeholder="Email address" required>
+                </div><br><br>
+
+
+                <button type="submit" value="Submit">Reset your password</button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>
