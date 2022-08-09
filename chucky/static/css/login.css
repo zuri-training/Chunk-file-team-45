@@ -413,6 +413,7 @@ input[placeholder="Enter your password"]{
 .forgot a{
     text-decoration: none;
     color: #034C95;
+    padding-left: 15px;
 }
 
 
@@ -420,12 +421,20 @@ input[placeholder="Enter your password"]{
     .content{
         padding-left: 150px;
     }
+    .forgot a{
+
+    padding-left: 30px;
+}
 
 }
 @media only screen and (max-width:830px) {
     .content{
         padding: 20px;
     }
+    .forgot a{
+
+    padding-left: 30px;
+}
 }
 
 .success{
