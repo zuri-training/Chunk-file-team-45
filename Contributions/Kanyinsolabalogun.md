@@ -12,11 +12,11 @@
    
    <li> updated the finding of the interview on the team's figjam  </li>
    
-   <li> using the that was taken doing the interview,came uo with an emphathy map with other team members </li>
+   <li> using the note that was taken doing the interview,came up with an emphathy map with other team members </li>
    
    <li> Created a user flow for the user with other team member </li> https://github.com/zuri-training/Chunk-file-team-45/issues/65
    
-   <li> Created the style guide component </li>  https://github.com/zuri-training/Chunk-file-team-45/issues/66
+   <li> Created the style guide components </li>  https://github.com/zuri-training/Chunk-file-team-45/issues/66
    
    <li> Footer and header component</li> https://github.com/zuri-training/Chunk-file-team-45/issues/67
    
@@ -32,5 +32,3 @@
 </ol>
 
 Link to the research plan https://docs.google.com/document/d/1Kg80WJVM2ufSrR5N105s9h-7nLH0aASdJzOLd7cXe6M/edit
-
-Link to style guide components on figma https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=141%3A2
