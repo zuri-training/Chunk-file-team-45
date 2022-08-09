@@ -3,10 +3,10 @@
 Aspects worked on:
 <ol> 
   <li>User research <li>
-  User Flow
-  Idea Brainstorming
-  Idea Prioritisation
-  Wireframe Design
+  <li>User Flow <li>
+  <li>Idea Brainstorming <li>
+  <li> Idea prioritisation <li>
+  <li>Wireframe Design</li>
   Low fidelity design
   High fidelity Design
 </ol>
