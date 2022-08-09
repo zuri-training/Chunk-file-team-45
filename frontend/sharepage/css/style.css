@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#F5F5F5;}
+.sharepage-container{
+   
+      margin: 5rem 5.625rem;
+}
+.share-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.share-header1 p{
+    font-size: 2.625rem;
+}
+.share-header2{
+    margin:1.875rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.share-header2 .fa-solid{
+    font-size: 2rem;
+}
+.sharepage-document{
+    background-color: #B1CAE3;
+    margin-top: 3.125rem;
+    border-radius: 0.625rem;
+    border: 1px solid #B1CAE3;
+    padding: 0.625rem;
+}
+.sharepage-cellunit{
+    display:flex;
+    padding: 1.25rem;
+    border-bottom: 1px solid #11171d ;
+}
+.sharepage-cellunit1{
+    font-size: 2.1875rem
+}
+.sharepage-cellunit2{
+    margin-left: 1.875rem;
+    word-spacing: 0.3125rem;
+    font-size: 1.25rem; 
+    color: #034C95;
+    font-weight: bold;
+}
+.sharepage-icons{
+    display:flex;
+    margin-top: 0.625rem;
+
+}
+.sharepage-icon{
+    margin: 1.25rem;
+
+}
+.sharepage-icon1{
+font-size: 2.1875rem;
+
+}
+.sharepage-icon2{
+    font-size: 1.5625rem;
+    font-weight: 200;
+    margin-top: -25px;
+    margin-left: 0.9375rem;
+    font-weight: 700;
+}
+.another-document{
+    background-color: #fff;
+    padding: 0.3125rem 1.5625rem;
+    margin-top: 1.5625rem;
+    border-radius: 0.2rem;
+    word-spacing: 0.1875rem;
+    font-size: 16px;
+    color:#034C95;
+    border: 1px dashed #034C95;
+}
+.share-via{
+    color: darkblue;
+    font-size: 1.875rem;
+    margin-top: 1.5625rem;
+}
+.sharepage-button{
+    width: 30%;
+    margin-top: 1.25rem;
+    border: 1px solid #B1CAE3;
+    background-color: #B1CAE3;
+    height: 7vh;
+    outline: none;
+    border: none;
+    border-radius: 0.625rem;
+    display: flex;
+}
+.sharepage-btn1{
+    width: 50%;
+    max-height: 100%;
+    border-radius: 0.625rem;
+    outline: none;
+    border: none;
+    background-color: #034C95;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.sharepage-btn2{
+    width: 50%;
+    max-height: 100%;
+    border-radius: 0.625rem;
+    outline: none;
+    border: none;
+    background-color: #B1CAE3;
+    color: #034C95;
+    font-size: 1.2rem;
+}
+.recipient-email-inputbox{
+    margin-top: 1.875rem;
+    width: 30%;
+    border-radius: 10px;
+    color:#034C95;
+
+}
+.recipient-email-inputbox .email{
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #034C95;
+}
+.sharepage-sharebtn{
+    display: block;
+    margin: 1.875rem auto;
+    padding: 0.8125rem 5rem;
+    font-size: 1.5625rem;
+    border-radius: 1.25rem;
+    font-weight: 900;
+    color:#034C95;
+    text-transform: uppercase;
+    border: 1px solid #034C95;
+}
+
+/* SIGN UP MEDIA QUERY */
+@media (min-width:700px) and (max-width:1000px) {
+    /* .sharepage-document{
+        background-color: #F5F5F5;
+
+    } */
+    .sharepage-button{
+        width: 50%;
+    }
+    .sharepage-btn1{
+        width: 50%;   
+    }
+    .sharepage-btn2{
+        width: 50%;
+      
+    }
+    .recipient-email-inputbox{
+        margin-top: 2rem;
+        width: 40%;
+    
+    }
+    .sharepage-button{
+        width: 40%;
+        margin-top: 1.5rem;
+    }
+    
+    
+    
+}
+@media screen and (max-width:699px){
+    .sharepage-container{
+   
+        margin: 5rem 2.625rem;
+  }
+   
+  .share-header{
+      display: flex;
+      justify-content: space-between;
+    
+  }
+  .share-header1 p{
+      font-size: 1.625rem;
+  }
+  .share-header2{
+      margin:.875rem;
+  }
+  .sharepage-document{
+    background-color: #B1CAE3;
+    margin-top: .125rem;
+    border-radius: 0.625rem;
+    width: 80vw;
+}
+.sharepage-cellunit2{
+    font-size: 1rem; 
+}
+
+.sharepage-button{
+    width: 80%;
+    margin-top: 1.25rem;
+    height: 4vh;
+    display: flex;
+}
+.sharepage-btn1{
+   
+    font-size: 1rem;
+}
+.sharepage-btn2{
+    font-size: 1rem;
+}
+.recipient-email-inputbox{
+    width: 90%;
+
+}
+.recipient-email-inputbox .email{
+    padding: 10px;
+}
+.sharepage-sharebtn{
+    padding: 0.8125rem 3rem;
+    font-size: 1.3625rem;;
+}
+    
+
+}
