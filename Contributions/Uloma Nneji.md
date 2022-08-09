@@ -1,4 +1,4 @@
-<h1>Uloma Nneji</h1>
+<h1>Uloma Nneji (I4G003982XOB)</h1>
 <h2>Product Designer (<em>UX/UI Designer</em>)</h2>
 <h3>Project chunk file (Team45)</h3>
 <p><strong> List of contributions during the project phase: </strong></p>
