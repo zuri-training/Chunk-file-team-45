@@ -25,6 +25,7 @@
    https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=940%3A4790
    
    <li> wireframes and low fidelity wireframes for dashboard desktop,tablet and mobile  </li>
+   https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2454%3A10008
    
    <li> Contributed to the high fidelity wireframe for dashboard </li> https://github.com/zuri-training/Chunk-file-team-45/issues/55
    https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2454%3A10008
@@ -33,6 +34,7 @@
    https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2454%3A10009
    
    <li> Designed the documentation page wireframe, low fidelity wireframe and high fidelity wireframe for desktop, tablet and mobile https://github.com/zuri-training/Chunk-file-team-45/issues/62
+      https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2354%3A35618
       
       
    <li>  Wrote the non-technical ux writing for the documentation page  </li>   https://github.com/zuri-training/Chunk-file-team-45/issues/71
