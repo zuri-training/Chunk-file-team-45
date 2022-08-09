@@ -2,7 +2,7 @@
 <ol>I designed the wireframe and Lo-Fi for the ccontact us and Faq responsive screens as assign to me by Chigozie.  
       <li> https://github.com/zuri-training/Chunk-file-team-45/issues?q=assignee%3A%40me+is%3Aclosed
             <li> https://www.figma.com/file/u1asikejW1s1pF9NU51pPd/FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=480%3A344
-                  <li> https://www.figma.com/file/u1asikejW1s1pF9NU51pPd/FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=262%3A40
+                  <li> https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2454%3A10011
       </ol>
 <h1> User Research: Resolved </h1>
   <ol> I drafted the interview questions for the education Sector and carried out interviews with users in the EDUCATION Sector.
