@@ -4,13 +4,13 @@ const menuRespond = document.querySelector(".responsive");
 let menuClosed = true;
 
 menuBtn.addEventListener("click", () => {
-  if(menuClosed) {
+  if (menuClosed) {
     menuBtn.classList.add("open");
     menuRespond.classList.add("responsiveBlock");
     menuClosed = false;
   } else {
     menuBtn.classList.remove("open");
-    menuClosed = true;   
+    menuClosed = true;
     menuRespond.classList.remove("responsiveBlock");
   }
-})
+});

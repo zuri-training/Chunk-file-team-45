@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family:'Clash Grotesk', sans-serif; 
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+
+}
+.card{
+    background-color: #FAFCFE;
+    width:630px;
+    height:450px;
+     top: 100px;
+     border-radius: 0 0 0 0;
+     display: flex;
+}
+
+.card-head{
+    padding:20px;
+
+}
+
+.close_svg{
+    margin-left:570px;
+    padding-top: 0px;
+    position:relative;
+    bottom:70px;
+    
+}
+
+.card-body{
+    text-align: center;
+   
+}
+.card-title{
+    font-size:46px;
+    font-weight:bolder;
+    color:#012345;
+    line-height:69px;
+    position:relative;
+    bottom:40px;
+    font-style: normal;
+}
+
+.hline{
+    position:relative;
+    bottom:30px;
+}
+
+.file{
+    position: relative;
+    bottom:25px;
+}
+.card-text{
+    font-size:25px;
+    font-weight:bold;
+    color:#000000;
+    line-height:40px;
+    font-style: normal;
+    position: relative;
+    bottom: 15px;
+    
+}
+
+.text-muted{
+    font-family: 'Clash Grotesk';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 10px;
+    line-height: 8px;
+    padding:7px;
+    color:#666666;
+}
+
+@media only screen and (max-width: 1430px){
+    .container{
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:830px) {
+    .container{
+        display: flex;
+        align-items: center;
+        
+    }
+    .card{
+        display: flex;
+        align-items: center;
+        height:250px;
+        width:350px;
+    }
+    .close_svg{
+        margin-left:300px;
+        padding-top: 0px;
+        position:relative;
+        bottom:70px;
+    }
+
+}

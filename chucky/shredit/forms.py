@@ -1,3 +1,4 @@
+from django.forms import ValidationError
 from django import forms
 from django.conf import settings
 from django.core.mail import send_mail
@@ -5,9 +6,10 @@ from django.core.mail import send_mail
 
 class ContactForm(forms.Form):
 
-    name = forms.CharField(max_length=120, label='Name',required=True)
+    name = forms.CharField(max_length=120, label='Name', required=True)
     email = forms.EmailField(label='Email', required=True)
-    message = forms.CharField(widget=forms.Textarea, label='Message', required=True)
+    message = forms.CharField(widget=forms.Textarea,
+                              label='Message', required=True)
 
     def get_info(self):
         """
@@ -27,14 +29,50 @@ class ContactForm(forms.Form):
 
     def send(self):
         msg = self.get_info()
-        send_mail(subject='Hello, I need help.',message=msg,from_email=settings.EMAIL_HOST_USER,recipient_list=['olaisaiah54@gmail.com',])
-	    # try:
-     #        send_mail(
-     #        subject='Hello, I need help.',
-     #        message=msg,
-     #        from_email=settings.EMAIL_HOST_USER,
-     #        recipient_list=[settings.RECIPIENT_ADDRESS]
-     #        )
-	    # 	return True
-	    # except:
-	    # 	return None 
+        try:
+            send_mail(
+                subject="Hello, I need help.",
+                message=msg,
+                from_email='admin@mail.com',
+                recipient_list=['olaisaiah54@gmail.com', ]
+            )
+            return True
+        except:
+            return None
+
+
+class FileUploadForm(forms.Form):
+
+    SIZE_TYPE = (
+        ("KB", "KB"),
+        ("MB", "MB")
+    )
+
+    file = forms.FileField()
+    size_type = forms.CharField(
+        required=True,
+        widget=forms.Select(choices=SIZE_TYPE)
+    )
+    chunk_num = forms.IntegerField()
+
+    def clean_file(self):
+        clean_file = self.cleaned_data.get('file').name.split('.')[-1]
+
+        if not clean_file.lower() in ['json', 'csv']:
+            raise ValidationError('File should be of JSON or CSV type')
+
+    def clean_chunk_num(self):
+        clean_chunk_num = self.cleaned_data.get('chunk_num')
+
+        if clean_chunk_num < 0 or clean_chunk_num == 0:
+            raise ValidationError('Chunk number should be greater than 0')
+
+        return clean_chunk_num
+
+    def clean_size_type(self):
+        clean_size_type = self.cleaned_data.get('size_type')
+
+        if clean_size_type not in ['KB', 'MB']:
+            raise ValidationError('Size type should be KB or MB')
+
+        return clean_size_type
