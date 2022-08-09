@@ -1,3 +1,4 @@
+from django.forms import ValidationError
 from django import forms
 from django.conf import settings
 from django.core.mail import send_mail
@@ -48,9 +49,30 @@ class FileUploadForm(forms.Form):
     )
 
     file = forms.FileField()
-    size_type = forms.MultipleChoiceField(
+    size_type = forms.CharField(
         required=True,
-        widget=forms.CheckboxSelectMultiple,
-        choices=SIZE_TYPE,
+        widget=forms.Select(choices=SIZE_TYPE)
     )
     chunk_num = forms.IntegerField()
+
+    def clean_file(self):
+        clean_file = self.cleaned_data.get('file').name.split('.')[-1]
+
+        if not clean_file.lower() in ['json', 'csv']:
+            raise ValidationError('File should be of JSON or CSV type')
+
+    def clean_chunk_num(self):
+        clean_chunk_num = self.cleaned_data.get('chunk_num')
+
+        if clean_chunk_num < 0 or clean_chunk_num == 0:
+            raise ValidationError('Chunk number should be greater than 0')
+
+        return clean_chunk_num
+
+    def clean_size_type(self):
+        clean_size_type = self.cleaned_data.get('size_type')
+
+        if clean_size_type not in ['KB', 'MB']:
+            raise ValidationError('Size type should be KB or MB')
+
+        return clean_size_type
