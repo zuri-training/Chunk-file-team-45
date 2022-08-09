@@ -23,6 +23,7 @@
    <li> wireframes and low fidelity wireframes for dashboard desktop,tablet and mobile  </li>
    
    <li> Contributed to the high fidelity wireframe for dashboard </li> https://github.com/zuri-training/Chunk-file-team-45/issues/55
+   https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2454%3A10008
    
    <li> Designed the landing page wireframe, low fidelity wireframe  </li> https://github.com/zuri-training/Chunk-file-team-45/issues/56
    
