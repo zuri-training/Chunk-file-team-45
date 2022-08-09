@@ -6,4 +6,4 @@
     Designed the wireframe for the sign up and sign in screens 
     Here is the Figma Link https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2354%3A24789
     Contributed to the Brainstorming and User research 
-    Here is the Figma Link https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2354%3A22818
+    Here is the Figma Link https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=2354%3A22818 </li>
