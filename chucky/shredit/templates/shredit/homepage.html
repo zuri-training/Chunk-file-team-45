@@ -19,10 +19,12 @@
     <main>           
         <div class="A">
             <section class="icon">
-                <img src="{% static 'images/desktop logo.png' %}">
-             </section>
+              <a href="{% url 'shredit:index-page' %}">
+              <img src="{% static 'images/desktop logo.png' %}">
+              </a>
+            </section>
             <section>
-                <h2 class="dashboard">DASHBOARD</h2>
+                <h2 class="dashboard">{{ request.user.username }}'Dashboard</h2>
             </section>
             <section class="details">
                 <p><b>Username:</b> {{ request.user.username }}</p>
@@ -44,16 +46,12 @@
                     </li>
                     <li  id="sec-A">
                         <div class="sec-A">
-                            
-
                     <img src="{% static 'images/share.svg' %}" class="li">
                     <a href="#">Share</a>
                     </div>
                     </li>
                     <li  id="sec-A">
                         <div class="sec-A">
-                          
-
                     <img src="{% static 'images/setting-2.svg' %}" class="li">
                     <a href="#">Settings</a>
                     </div>
@@ -75,8 +73,6 @@
             <ul>
                 <li id="sec-B">
                     <div class="sec-B">
-                            
-
             <img src="{% static 'images/logout.svg' %}" class="li" id="arrow">
              <a href="{% url 'user:user-logout' %}" class="out">Sign out</a>
              </div>
@@ -100,8 +96,7 @@
             <p id="upload">The allowed formats are csv,json only</p>
             <div class="choose">
                 <fieldset id="fieldset">
-                    <input id="choose-file" type="text" placeholder="Choose file">
-                    <p class="fieldset">No file chosen</p>
+                    <input type="file" accept=".json, .csv" id="choose-file" placeholder="choose file">
                 </fieldset>
             </div>
         </div>
@@ -114,24 +109,37 @@
                 <form action="" id="form">
                     <p>What do you want to do?</p>
                     <div class="chunk">
-                    <label for="chunk-size">Select chunk size</label>
-                    <input type="radio" id="chunk-size" name="chunk-size" value="chunk-size">
-                    <label for="split">Split by number of chunks</label>
+                    <label for="chunk-size">Split by number of chunks</label>
+                    <input type="radio" id="chunk-size" name="split" value="chunk-size">
+                    <label for="split">Split by chunk size</label>
                     <input type="radio" id="split" name="split" value="split" checked>
                     </div>
+                    <div class="splittings">
+                        <p>Select number of chunks</p>
+                        <p>Select chunk size</p>
+                    </div>
                     <div class="select">
-                        <input type="number" placeholder="Input value" id="chunk">
+                        <input type="number" placeholder="Input value" id="chunk" class="one">
+                        <select name="chunking-options" id="chun">
+                            <option disabled selected>Size</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                        <input type="number" placeholder="Input value"id="chunk" class="two">
                         <select name="chunking-options" id="chun">
                             <option disabled selected>Size</option>
                             <option>KB</option>
                             <option>MB</option>
                         </select>
-                        <input type="number" placeholder="Input value"id="chunk" >
                         </div>
-                          </select>
+                        </select>
                           <div class="split">
-                          <button id="split">SPLIT</button>
-                          </div>
+                            <button id="split">SPLIT</button>
+                        </div>
                 </form>
             
         </div>
@@ -187,7 +195,7 @@
         <div class="H">
             <div class="soon">
                 <h3 id="come">Coming soon</h3>
-                <img src="{% static 'images/Vector 1.svg' %}" class="li1">
+                <img src="{% static 'images/Vector 1.svg' %}" class="li3">
                 </div>
                 <p class="format">We are currently working on new formats</p>
                 <ul id="ul">

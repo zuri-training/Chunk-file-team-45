@@ -13,9 +13,10 @@ def register(request):
         return redirect('shredit:dashboard')
     
     form = UserCreateForm()
+
     if request.method == 'POST':
         form = UserCreateForm(request.POST)
-        
+
         if not (agree := request.POST.get('agree')):
             messages.error(request, "You cannot access this platform if you do not agree to terms of services")
             return redirect('user:user-register')

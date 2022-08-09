@@ -72,11 +72,10 @@ class UserCreateForm(forms.Form):
 
 class UserLoginForm(forms.Form):
 
-    username = forms.CharField(max_length=50, required=True)
+    username = forms.CharField(max_length=50)
     password = forms.CharField(
         widget=forms.PasswordInput,
-        label='Password',
-        required=True
+        label='Password'
     )
 
     def clean_username(self):

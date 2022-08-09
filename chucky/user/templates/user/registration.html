@@ -21,6 +21,7 @@
 
 <title>{{ request.get_host }} | registration page</title>
 </head>
+
 <body>
     {% include "navbar.html" %}
 <main>
@@ -35,28 +36,33 @@
             </div>
             
             <div class="form">
-                <form action="{% url 'user:user-register' %}"method="POST">
-                    <div class="mb-3">
+                <form action="{% url 'user:user-register' %}" method="POST" id="form">
+                    
+                    <div class="mb-3 input-control">
                         <label for="id_username" class="form-label">Username<sup class="Asterisks">*</sup></label>
                         <input type="text" placeholder="enter your username" class="form-control" id="id_username" name="username" required>
-                        {{ form.username.errors }}
+                        <div class="errors">{{ form.username.errors }}</div>
+                        {% comment %} <div class="errors"></div> {% endcomment %}
                     </div>
-                    
-                    <div class="mb-3">
+
+                    <div class="mb-3 input-control">
                         <label for="id_email" class="form-label">Email address <sup class="Asterisks">*</sup></label>
                         <input type="email" placeholder="enter your email address" class="form-control" id="id_email" name="email" aria-describedby="emailHelp">
-                        {{ form.email.errors }}
+                        <div class="errors">{{ form.email.errors }}</div>
+                        {% comment %} <div class="errors"></div> {% endcomment %}
                     </div>
                     
-                    <div class="mb-3">
+                    <div class="mb-3 input-control">
                         <label for="id_password" class="form-label">Password <sup class="Asterisks">*</sup></label>
                         <input type="password" placeholder = "create a password"class="form-control" id="id_password" name="password">
-                        {{ form.password.errors }}
+                        <div class="errors">{{ form.password.errors }}</div>
+                        {% comment %} <div class="errors"></div> {% endcomment %}
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 input-control">
                         <label for="id_confirm_password" class="form-label">Confirmed Password <sup class="Asterisks">*</sup></label>
                         <input type="password" placeholder = "create a password"class="form-control" id="id_confirm_password" name="confirm_password">
-                        {{ form.confirm_password.errors }}
+                        <div class="errors">{{ form.confirm_password.errors }}</div>
+                        <div class="errors"></div>
                     </div>
                     <div id="emailHelp" class="form-text">must be at least eight characters
                     </div>
