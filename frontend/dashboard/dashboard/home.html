@@ -7,9 +7,73 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="home.css"> 
     <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,700,400,600,300,500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header></header>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav_logo">
+                <img src="logo.svg" alt="iota_logo">
+                <a href="index.html">iOTA</a>
+            </div>
+            
+            <div class="nav_links">
+                <div class="nav_link"><a href="#">About us</a></div>
+                <div class="nav_link"><a href="#">Documentation</a></div>
+                <div class="nav_link"><a href="#">Contact us</a></div>
+                <div class="nav_link"><a href="#">Resources</a></div>
+            </div>
+    
+            <div class="nav_signin_signup">
+                <div class="signin"><a href="#">Sign in</a></div>
+                <button class="btn">Sign up</button>
+            </div>
+    
+            <div class="menu__btn"> 
+                <div class="menu__btn--burger"></div>
+            </div>
+        </nav>
+        
+
+            <!--RESPONSIVE NAV-->
+        <div class="responsive">
+
+            <div>
+                <p class="username"><b>Username:</b> Kanyisola</p>
+                <p><b>Email:</b> zuri@training.com</p>
+            </div>
+            <div>
+                <img src="save-2.svg" class="li">
+                <a href="#">Saved files</a>
+            </div>
+            <div>
+                <img src="document-download.svg" class="li">
+                <a href="#">Downloads</a>
+            </div>
+            <div>
+                <img src="share.svg" class="li">
+                <a href="#">Share</a>
+            </div>
+            <div>
+                <img src="message-question.svg" class="li">
+                <a href="#">Help centre</a>
+            </div>
+            <div>
+                <img src="setting-2.svg" class="li">
+                <a href="#">Settings</a>
+            </div>
+            <div>
+                <div class="total">
+                    <p class="three">3 GB used out of 5 GB</p>
+                    <progress value="0.6">60%</progress>
+                </div>
+            </div>
+            
+        </div>
+    </header>
     <main>           
         <div class="A">
             <section class="icon">
@@ -43,42 +107,47 @@
                     </div>
                     </li>
                     <li  id="sec-A">
-                        <div class="sec-A">
-                    <img src="setting-2.svg" class="li">
-                    <a href="#">Settings</a>
-                    </div>
-                    </li>
-                    <li  id="sec-A">
                     <div class="sec-A">
                     <img src="message-question.svg" class="li">
                    <a href="#">Help centre</a>
+                    </div>
+                    </li>
+                    <li  id="sec-A">
+                        <div class="sec-A">
+                    <img src="setting-2.svg" class="li">
+                    <a href="#">Settings</a>
                     </div>
                     </li>
                 </ul>
             </section>
             <section class="progress">
                 <div class="total">
-                    <p>3 GB used out of 5 GB</p>
+                    <p class="three">3 GB used out of 5 GB</p>
                     <progress value="0.6">60%</progress>
                 </div>
             </section>
             <ul>
                 <li id="sec-B">
                     <div class="sec-B">
-            <img src="logout.svg" class="li" id="arrow">
-             <a href="login.html" class="out">Sign out</a>
-             </div>
-             </li>
+                        <img src="logout.svg" class="li" id="arrow">
+                        <a href="login.html" class="out">Sign out</a>
+                    </div>
+                </li>
             </ul>
         </div>
+
+        <!--  -->
+
         <div class="B">
             <div id="text">
-            <h1>Hello, split those large files here</h1>
-            <div class="search">
-                <input class="search-files" type="text" placeholder="Search uploaded files">
+                <div>
+                    <h1>Hello, split those large files here</h1>
+                    <p>Split csv and json files, effortlessly and within seconds</p>
+                </div>
+                <div class="search">
+                    <input class="search-files" type="text" placeholder="Search uploaded files">
+                </div>
             </div>
-            </div>
-            <p>Split csv and json files, effortlessly and within seconds</p>
         </div>
         <div class="C">
             <div class="upload">
@@ -101,37 +170,56 @@
                 <form action="" id="form">
                     <p>What do you want to do?</p>
                     <div class="chunk">
-                    <label for="chunk-size">Split by number of chunks</label>
-                    <input type="radio" id="chunk-size" name="split" value="chunk-size">
-                    <label for="split">Split by chunk size</label>
-                    <input type="radio" id="split" name="split" value="split" checked>
+                        <div>
+                            <label for="chunk-size">Split by number of chunks</label>
+                            <input type="radio" id="chunk-size" name="split" value="chunk-size">
+                        </div>
+
+                        <div>
+                            <label for="split">Split by chunk size</label>
+                            <input type="radio" id="split" name="split" value="split" checked>
+                        </div>
+                        
+                        
                     </div>
-                    <div class="splittings">
-                        <p>Select number of chunks</p>
-                        <p>Select chunk size</p>
-                    </div>
+
                     <div class="select">
-                        <input type="number" placeholder="Input value" id="chunk" class="one">
-                        <select name="chunking-options" id="chun">
-                            <option disabled selected>Size</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                        </select>
-                        <input type="number" placeholder="Input value"id="chunk" class="two">
-                        <select name="chunking-options" id="chun">
-                            <option disabled selected>Size</option>
-                            <option>KB</option>
-                            <option>MB</option>
-                        </select>
+                        <div>
+                            <p>Select number of chunks</p>
+                            <div class="inner-div">
+                                <input type="number" placeholder="Input value" id="chunk" class="one">
+                                <select name="chunking-options" id="chun">
+                                    <option disabled selected>Size</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </div>
+                            
                         </div>
-                        </select>
-                          <div class="split">
+                        
+                        <div>
+                            <p>Select chunk size</p>
+                            <div class="inner-div">
+                                <input type="number" placeholder="Input value"id="chunk" class="two">
+                                <select name="chunking-options" id="chun">
+                                    <option disabled selected>Size</option>
+                                    <option>KB</option>
+                                    <option>MB</option>
+                                </select>
+                            </div>
+                            </div>
+                            </select>
+                            
+                        </div>
+
+                        <div class="split">
                             <button id="split">SPLIT</button>
-                        </div>
+                          </div>
+                        
                 </form>
             
         </div>
@@ -202,4 +290,5 @@
     </main>
     <footer></footer>
 </body>
+<script src="index.js"></script>
 </html>
