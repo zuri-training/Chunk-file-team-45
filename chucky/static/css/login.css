@@ -445,7 +445,6 @@ input[placeholder="Enter your password"] {
   color: red;
 }
 
-<<<<<<< HEAD
 .forgot{
     /* margin-bottom: 12px; */
     font-size: 12px;
@@ -477,8 +476,7 @@ input[placeholder="Enter your password"] {
     padding-left: 30px;
 }
 }
-=======
->>>>>>> ce01fc138f0c279e03e7776ffd91ef198fc8ae9b
+
 
 .success{
     background-color: #09c372;
