@@ -7,6 +7,19 @@ Aspects worked on:
   <li>Idea Brainstorming <li>
   <li> Idea prioritisation <li>
   <li>Wireframe Design</li>
+  
+  
+  <li> Figjam file https://github.com/zuri-training/Chunk-file-team-45/issues/74 </li>
+
+Style Guide https://github.com/zuri-training/Chunk-file-team-45/issues/72 
+
+User flow https://github.com/zuri-training/Chunk-file-team-45/issues/65 
+
+Idea Prioritisation https://github.com/zuri-training/Chunk-file-team-45/issues/61 
+
+Dashboard https://github.com/zuri-training/Chunk-file-team-45/issues/55 
+
+User Research https://github.com/zuri-training/Chunk-file-team-45/issues/27 
   Low fidelity design
   High fidelity Design
 </ol>
