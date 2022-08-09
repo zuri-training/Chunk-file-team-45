@@ -2,8 +2,8 @@
 <h2>Product Designer</h2>
 <h3>Issue resolved</h3>
 <ol>
-   <li> Wrote the research plan used by product designers </li>
-   <li> Used screener questions made by a team member to eliminate participants who were not appropriate for our research study </li> https://github.com/zuri-training/Chunk-file-team-45/issues/26
+   <li> Wrote the research plan used by product designers </li> https://github.com/zuri-training/Chunk-file-team-45/issues/26
+   <li> Used screener questions made by a team member to eliminate participants who were not appropriate for our research study </li> 
    <li> conducted user research to obtain knowledge and understand potential users </li> https://github.com/zuri-training/Chunk-file-team-45/issues/27
    <li> conducted an interview for a businessman in the e-commerce sector who has large file containing his customer details </li>
    <li> updated the finding of the interview on the team's figjam  </li>
