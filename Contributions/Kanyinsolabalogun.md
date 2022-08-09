@@ -15,7 +15,9 @@
    <li> Contributed to the high fidelity wireframe for dashboard </li> https://github.com/zuri-training/Chunk-file-team-45/issues/55
    <li> Designed the landing page wireframe, low fidelity wireframe  </li> https://github.com/zuri-training/Chunk-file-team-45/issues/56
    <li> Designed the documentation page wireframe, low fidelity wireframe and high fidelity wireframe for desktop, tablet and mobile https://github.com/zuri-training/Chunk-file-team-45/issues/62
+   <li>  Wrote the non-technical ux writing for the documentation page  </li>   https://github.com/zuri-training/Chunk-file-team-45/issues/71
 </ol>
+
 Link to the research plan https://docs.google.com/document/d/1Kg80WJVM2ufSrR5N105s9h-7nLH0aASdJzOLd7cXe6M/edit
 
 Link to style guide components on figma https://www.figma.com/file/R0PgiAq3jAWxXKuYN8w8FZ/COPY-FIGMA-(chunk-file)--PROJECT-TEAM-45?node-id=141%3A2
