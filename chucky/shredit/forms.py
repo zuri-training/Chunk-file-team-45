@@ -41,38 +41,55 @@ class ContactForm(forms.Form):
             return None
 
 
-class FileUploadForm(forms.Form):
-
+class UploadForm(forms.Form):
     SIZE_TYPE = (
         ("KB", "KB"),
         ("MB", "MB")
     )
 
-    file = forms.FileField()
+    file = forms.FileField(required=False)
     size_type = forms.CharField(
-        required=True,
+        required=False,
         widget=forms.Select(choices=SIZE_TYPE)
     )
-    chunk_num = forms.IntegerField()
+    chunk_num = forms.IntegerField(required=False)
+    chunk_size_num = forms.IntegerField(required=False)
 
-    def clean_file(self):
-        clean_file = self.cleaned_data.get('file').name.split('.')[-1]
+    # def clean_file(self):
 
-        if not clean_file.lower() in ['json', 'csv']:
-            raise ValidationError('File should be of JSON or CSV type')
+    #     file = self.cleaned_data.get('file')
+    #     if file is not None:
+    #         clean_file = self.cleaned_data.get('file').name.split('.')[-1]
+    #         if not clean_file.lower() in ['json', 'csv']:
+    #             raise ValidationError('File should be of JSON or CSV type')
+    #     else:
+    #         raise ValidationError('This Field is required')
+
+    #     return clean_file
 
     def clean_chunk_num(self):
         clean_chunk_num = self.cleaned_data.get('chunk_num')
 
-        if clean_chunk_num < 0 or clean_chunk_num == 0:
-            raise ValidationError('Chunk number should be greater than 0')
+        if clean_chunk_num:
+            if clean_chunk_num < 0 or clean_chunk_num == 0:
+                raise ValidationError('Chunk number should be greater than 0')
 
         return clean_chunk_num
 
     def clean_size_type(self):
         clean_size_type = self.cleaned_data.get('size_type')
 
-        if clean_size_type not in ['KB', 'MB']:
-            raise ValidationError('Size type should be KB or MB')
+        if clean_size_type:
+            if clean_size_type not in ['KB', 'MB']:
+                raise ValidationError('Size type should be KB or MB')
 
         return clean_size_type
+
+    def clean_chunk_size_num(self):
+        clean_num = self.cleaned_data.get('chunk_size_num')
+
+        if clean_num:
+            if clean_num < 0 or clean_num == 0:
+                raise ValidationError('Chunk number should be greater than 0')
+
+        return clean_num

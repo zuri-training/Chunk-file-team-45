@@ -1,0 +1,149 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block title %}
+{{ request.get_host }} | documentation page
+{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/docs.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+    <main>
+        <section class="doc-content">
+            <div class="doc-content-head">
+                <p class="title">iOTA Documentation</p>
+                <p class="body">Welcome to the iOTA  Documentation where you learn the basic information about how our platform works</p>
+            </div>
+
+            <div class="table-of-contents">
+                <p>Table of contents</p>
+                <ul class="content-list">
+                    <a href="#whats-iota"><li>What is iOTA ?</li></a>
+                    <a href="#get-started"><li>Getting started</li></a>
+                    <a href="#how-it-works"><li>How spliting works on the platform</li></a>
+                    <a href="#about-platform"><li>About the platform build up</li></a></li>
+                    <a href="#why-iota"><li>Why iOTA</li></a>
+                </ul>
+            </div>
+
+            <div id="whats-iota" class="whats-iota">
+                <p class="title">What is iOTA ?</p>
+                <p class="body"> iOTA is an platform, that helps user with large csv and json file break that files into smaller chunks. This allows for more efficient data management and allows for easier data analysis. Our platform is user friendly and with our basic system requirement you can easily access our platform on your favourite browser.</p>
+            </div>
+            
+            <div id="get-started" class="get-started">
+                <p class="title">Getting started</p>
+                <p class="body-1">
+                    To use the platform you need to be an authenticated user on our end . Our authenticated user can be identified by and benefits from the following;</p>
+                <p class="body-2">As an authenticated user you have access to the following features</p>
+                <ul>
+                    <li>Full access to the platform</li>
+                    <li>A personalised dashboard</li>
+                    <li>Set your desired chunk file size</li>
+                    <li>Access to 2 format (CSV and JSON)</li>
+                    <li>Access to our added features - A download link can be generated to share the chunked files and anyone (unauthenticated/ authenticated/ not a user at all of the platform) can access the chunked files to easily download them.</li>
+                    <li>Access to our format we would be adding in the near future</li>
+                    <li>Allows users to save data and come back to download your splitted file</li>
+                </ul>
+                <br>
+                <p class="body-3">Unauthenticated users have access to the following features</p>
+                <ul>
+                    <li>Visiting the platform to view basic information of the site </li>
+                    <li>Access to our landing page, documentation page, about us page and our resource page</li>
+                    <li>Access to register to gain full access to the platform</li>
+                </ul>
+            </div>
+
+            <div id="how-it-works" class="how-it-works">
+                <p class="title">How splitting works on the platform</p>
+
+                <div class="batch-1">
+                    <img src="{% static 'images/amico.svg' %}" alt="Split on the dashboard">
+                    <div>
+                        <p class="title">Authenticated user</p>
+                        <p class="body">You receive what you signed up for when you register for full access! No demands from behind the scenes.</p>
+                    </div>
+                </div>
+
+                <div class="batch-2">
+                    
+                    <div>
+                        <p class="title">Split on the dashboard</p>
+                        <p class="body">When you give iOTA the file to be transformed with a minimal set of settings,  it processes the file and sends you a link to retrieve the transformed contents.</p>
+                    </div>
+
+                    <img src="{% static 'images/amico-2.svg' %}" alt="Authenticated user">
+                </div>
+
+                <div class="batch-3">
+                    <div>
+                        <p class="title">Easily share your files </p>
+                        <p class="body">You can effortlessly send your file to your email or a colleague's email on your dashboard.</p>
+                    </div>
+
+                    <img src="{% static 'images/amico-4.svg' %}" alt="Easily share your files">
+                </div>
+
+                <div class="batch-4">
+                    <img src="{% static 'images/amico-3.svg' %}" alt="Download your splited filesd">
+                    <div>
+                        <p class="title">Download your splited files</p>
+                        <p class="body">You have the option of downloading a selected file or your entire file in a zip format to your device.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about-platform" class="about-platform">
+                <p class="title">About the platform buildup</p>
+
+                <div class="body">
+                    <p>Technology used -</p>
+                    <ul>
+                        <li>Frontend - HTML, CSS and Javascript for building and designing of the website</li>
+                        <br>
+                        <li>Backend -  Django (Django framework) - to authenticate users,save user data, uploading of files, validating file formats, chunking files, saving user data and progress and download of chunked files</li>
+                        <br>
+                        <li>Python - To carry out the splitting and returning of the chunked files</li>
+                        <br>
+                        <li>Database schema - A database schema organizes data into separate entities, determines how to create relationships between organized entities, and how to apply the constraints on the organized data.</li>
+                        <li>A concise database schema was designed to organize the data to be obtained from the user into tables and fields showing the relationships of each set of tables with one another.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="doc-image">
+                <p>IMAGE OF OUR  DATABASE SCHEMA</p>
+                <img src="{% static 'images/amico-9.svg' %}" alt="Database schema">
+            </div>
+
+            <div id="why-iota" class="why-iota">
+                <p class="title">Why choose iOTA ?</p>
+                <ul>
+                    <li>iOTA was born out of understanding of user pain points when dealing with large files and empathy for such users. The platform makes splitting files super convenient - in a couple of clicks, get their files chunked and ready for download.</li>
+                    <li>iOTA will keep user details safe with excellent data security and encryption - our users can rest easy knowing their data will not be shared or stolen.</li>
+                    <li>iOTA saves user progress and they can come back whenever to get their files.</li>
+                    <li>No ads - IOTA does not allow this. Enjoy a wonderful experience getting your task done alongside our pleasant interface.</li>
+                    <li>Register to have full access - you get what you signed up for! No backdoor demands.</li>
+                    <li>Excellent loading speed - you don’t need to worry about lagging due to file size (once within the limit, we got you!)</li>
+                </ul>
+            </div>
+
+            <div class="questions">
+                <p class="body-1">Have any questions? Need new information? Feel free to check our <a href="{% url 'shredit:contact' %}">Contact us</a> page.
+                </p>
+
+                <p class="body-2">You might think, “what’s the difference between IOTA and other file splitting platforms?” Well, all we can say is - Give us a trial and you won’t regret it!
+
+                </p>
+            </div>
+        </section>
+    </main>
+
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock js %}

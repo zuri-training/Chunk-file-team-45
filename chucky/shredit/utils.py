@@ -77,7 +77,7 @@ class Shredding:
                     json.dump(json_file[shred:shred+rows_num],
                               open(os.path.join(
                                   settings.MEDIA_ROOT, filename,
-                                  f'shred_it_filename-{shred+1}.json'
+                                  f'{filename}-{shred+1}.json'
                               ), 'w', encoding='utf8'),
                               ensure_ascii=False,
                               indent=True
@@ -98,6 +98,7 @@ class Shredding:
                     for filename in files:
                         file_path = os.path.join(root, filename)
                         zip_shred.write(file_path, basename(file_path))
+
         except:
             return None
         return os.path.abspath(zipped_file_path)
@@ -115,11 +116,25 @@ class Shredding:
         if file.name.split('.')[-1] == 'csv':
             if Shredding.shreding_csv_file(file_path, chunk_num, file.name):
                 if zip_it := Shredding.zip_it(file.name):
+                    # storage_url = Shredding.storage(zip_it, file.name)
                     shutil.rmtree(os.path.join(settings.MEDIA_ROOT, file.name))
                     return zip_it
 
         if file.name.split('.')[-1] == 'json':
             if Shredding.shreding_json_file(file_path, chunk_num, file.name):
                 if zip_it := Shredding.zip_it(file.name):
+                    storage_url = Shredding.storage(zip_it, file.name)
                     shutil.rmtree(os.path.join(settings.MEDIA_ROOT, file.name))
                     return zip_it
+
+    # @staticmethod
+    # def storage(path, filename):
+    #     print(path)
+    #     zip_file = ZipFile(path, mode='r')
+
+    #     storage = FileSystemStorage(location=os.path.join(
+    #         settings.MEDIA_ROOT, 'zipped_files'))
+    #     storage = storage.save(filename, zip_file).url
+    #     zip_file.close()
+    #     print(storage)
+    #     return storage

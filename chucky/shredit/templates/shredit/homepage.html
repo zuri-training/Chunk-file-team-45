@@ -5,26 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ request.get_host }} | {{ request.user.username }} | dasbboard page</title>
-
+    <title>{{ request.get_host }} | {{ request.user.username }} | dashboard</title>
+    
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}"> 
     
-    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,700,400,600,300,500&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,700,400,600,300,500&display=swap"rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>        
-        {% include 'messages.html' %}
+    {% include 'messages.html' %} 
+    <header class="header">
+        <nav class="nav">
+            <div class="nav_logo">
+                <img src="{% static 'images/logo.svg' %}" alt="iota_logo">
+                <a href="{% url 'shredit:index-page' %}">iOTA</a>
+            </div>
+
+            <div class="menu__btn"> 
+                <div class="menu__btn--burger"></div>
+            </div>
+        </nav>
+        
+
+            <!--RESPONSIVE NAV-->
+        <div class="responsive">
+
+            <div>
+                <p class="username"><b>Username:</b> {{ request.user.username }}</p>
+                <p><b>Email:</b>{{ request.user.email }}</p>
+            </div>
+            <div>
+                <img src="{% static 'images/save-2.svg' %}" class="li">
+                <a href="#">Saved files</a>
+            </div>
+            <div>
+                <img src="{% static 'images/share.svg' %}" class="li">
+                <a href="{% url 'shredit:share' %}">Share</a>
+            </div>
+            <div>
+                <img src="{% static 'images/message-question.svg' %}" class="li">
+                <a href="{% url 'shredit:contact' %}">Help centre</a>
+            </div>
+            <div>
+                <img src="{% static 'images/setting-2.svg' %}" class="li">
+                <a href="#">Settings</a>
+            </div>
+            <div>
+                <div class="total">
+                    <p class="three">3 GB used out of 5 GB</p>
+                    <progress value="0.6">60%</progress>
+                </div>
+            </div>
+            
+        </div>
     </header>
-    <main>           
+    <main>          
         <div class="A">
             <section class="icon">
-              <a href="{% url 'shredit:index-page' %}">
-              <img src="{% static 'images/desktop logo.png' %}">
-              </a>
+                <a href="{% url 'shredit:index-page' %}">
+                    <img src="{% static 'images/desktop logo.png' %}" alt="iota_logo">
+                </a>
             </section>
             <section>
-                <h2 class="dashboard">{{ request.user.username }}'Dashboard</h2>
+                <h2 class="dashboard">DASHBOARD</h2>
             </section>
             <section class="details">
                 <p><b>Username:</b> {{ request.user.username }}</p>
@@ -40,64 +86,69 @@
                     </li>
                     <li  id="sec-A">
                         <div class="sec-A">
-                    <img src="{% static 'images/document-download.svg' %}" class="li">
-                    <a href="#">Downloads</a>
-                    </div>
-                    </li>
-                    <li  id="sec-A">
-                        <div class="sec-A">
                     <img src="{% static 'images/share.svg' %}" class="li">
-                    <a href="#">Share</a>
-                    </div>
-                    </li>
-                    <li  id="sec-A">
-                        <div class="sec-A">
-                    <img src="{% static 'images/setting-2.svg' %}" class="li">
-                    <a href="#">Settings</a>
+                    <a href="{% url 'shredit:share' %}">Share</a>
                     </div>
                     </li>
                     <li  id="sec-A">
                     <div class="sec-A">
+
                     <img src="{% static 'images/message-question.svg' %}" class="li">
                    <a href="#">Help centre</a>
+                    </div>
+                    </li>
+                    <li  id="sec-A">
+                        <div class="sec-A">
+
+                    <img src="{% static 'images/setting-2.svg' %}" class="li">
+                    <a href="#">Settings</a>
                     </div>
                     </li>
                 </ul>
             </section>
             <section class="progress">
                 <div class="total">
-                    <p>3 GB used out of 5 GB</p>
+                    <p class="three">3 GB used out of 5 GB</p>
                     <progress value="0.6">60%</progress>
                 </div>
             </section>
             <ul>
                 <li id="sec-B">
                     <div class="sec-B">
-            <img src="{% static 'images/logout.svg' %}" class="li" id="arrow">
-             <a href="{% url 'user:user-logout' %}" class="out">Sign out</a>
-             </div>
-             </li>
+
+                        <img src="{% static 'images/logout.svg' %}" class="li" id="arrow">
+                        <a href="{% url 'user:user-logout' %}" class="out">Sign out</a>
+                    </div>
+                </li>
             </ul>
         </div>
+
+        <!--  -->
+
         <div class="B">
             <div id="text">
-            <h1>Hello, split those large files here</h1>
-            <div class="search">
-                <input class="search-files" type="text" placeholder="Search uploaded files">
+                <div>
+                    <h1>Hello, split those large files here</h1>
+                    <p>Split csv and json files, effortlessly and within seconds</p>
+                </div>
+                <div class="search">
+                    <input class="search-files" type="text" placeholder="Search uploaded files">
+                </div>
             </div>
-            </div>
-            <p>Split csv and json files, effortlessly and within seconds</p>
         </div>
         <div class="C">
             <div class="upload">
                 <h3 id="up">Upload file</h3>
+
                 <img src="{% static 'images/document-upload.svg' %}" class="li1">
             </div>
             <p id="upload">The allowed formats are csv,json only</p>
+        <form method="POST" enctype="multipart/form-data">
             <div class="choose">
                 <fieldset id="fieldset">
-                    <input type="file" accept=".json, .csv" id="choose-file" placeholder="choose file">
+                    <input type="file" accept=".json, .csv" id="id_file" name="file" placeholder="choose file">
                 </fieldset>
+                <small class="django-error">{{ upload_form.file.errors }}</small>
             </div>
         </div>
         <div class="D">
@@ -106,66 +157,76 @@
                 <img src="{% static 'images/setting-4.svg' %}" class="li1">
             </div>
                 <p class="custom">Select chunk sizes or number of desired output chunks</p>
-                <form action="" id="form">
+               <!--  <form action="" id="form"> -->
                     <p>What do you want to do?</p>
                     <div class="chunk">
-                    <label for="chunk-size">Split by number of chunks</label>
-                    <input type="radio" id="chunk-size" name="split" value="chunk-size">
-                    <label for="split">Split by chunk size</label>
-                    <input type="radio" id="split" name="split" value="split" checked>
+                        <div>
+                            <label for="chunk-size">Split by number of chunks</label>
+                            <input type="radio" id="chunk-size" name="split" value="chunk-size">
+                        </div>
+
+                        <div>
+                            <label for="split">Split by chunk size</label>
+                            <input type="radio" id="split" name="split" value="split" checked>
+                        </div>
+                        
+                        
                     </div>
-                    <div class="splittings">
-                        <p>Select number of chunks</p>
-                        <p>Select chunk size</p>
-                    </div>
+
                     <div class="select">
-                        <input type="number" placeholder="Input value" id="chunk" class="one">
-                        <select name="chunking-options" id="chun">
-                            <option disabled selected>Size</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                        </select>
-                        <input type="number" placeholder="Input value"id="chunk" class="two">
-                        <select name="chunking-options" id="chun">
-                            <option disabled selected>Size</option>
-                            <option>KB</option>
-                            <option>MB</option>
-                        </select>
+                        <div>
+                            <p>Enter number of rows</p>
+                            <div class="inner-div">
+                                <input type="number" placeholder="Input value" 
+                                name='chunk_num' id="chunk" class="one">
+                                <div id="chun">
+                                    <p>Rows</p>
+                                </div>
+                                <small class="django-error">{{ upload_form.chunk_num.errors }}</small>
+                            </div>
+                            
                         </div>
-                        </select>
-                          <div class="split">
-                            <button id="split">SPLIT</button>
+                        
+                        <div>
+                            <p>Select chunk size</p>
+                            <div class="inner-div">
+                                <input type="number" placeholder="Input value"id="chunk" name='chunk_size_num' class="two">
+                                <select id="chun" name="size_type">
+                                    <option disabled selected>Size</option>
+                                    <option value="KB">KB</option>
+                                    <option value="MB">MB</option>
+                                </select>
+                                <small class="django-error">{{ upload_form.size_type.errors }}</small>
+                                <small class="django-error">{{ upload_form.chunk_size_num.errors }}</small>
+                            </div>
+                            </div>       
                         </div>
+
+                        <div class="split">
+                            <button type="submit" id="split">SPLIT</button>
+                          </div>
+                        {% csrf_token %} 
                 </form>
             
         </div>
         <div class="E">
             <div class="recent">
                 <h3 id="act">Recent activities</h3>
+
                 <img src="{% static 'images/document-download.svg' %}" class="li1">
                 </div>
                 <p class="seven">View your recently split files. Download files up to 7 days ago.</p>
                 <ul>
+                    {% for activity in activities %}
                     <li class="l2">
-                        <a href="#" class="l3">Zuri final sheet.csv</a>
-                        <p class="when">today</p>
+                        <a href="{% url 'shredit:download' activity.id %}" class="l3">{{ activity.file_name }}</a>
+                        <p class="when">{{ activity.updated  }}</p>
                     </li>
+                    {% empty %}
                     <li class="l2">
-                        <a href="#" class="l3">E-commerce database.json</a>
-                        <p  class="when">today</p>
-                    </li>
-                    <li class="l2">
-                        <a href="#" class="l3">Year 4 final result.csv</a>
-                        <p  class="when">today</p>
-                    </li>
-                    <li class="l2">
-                        <a href="#" class="l3">Developer snag list.csv</a>
-                        <p  class="when">yesterday</p>
-                    </li>
+                        <p class="when">Opps! you are yet to chunk some files</p>
+                    </l>
+                    {% endfor %}
                 </ul>
                 <div class="view">
                 <a href="#" id="view">View more</a>
@@ -174,17 +235,17 @@
         <div class="F">
             <div class="download">
                 <h4>Download</h4>
-                <a href="#" id="all">View all</a>
             </div>
             <div class="download-button">
-                <button id="download-button">Download</button>
+             <a href="{% url 'shredit:download' resent_file.id %}">
+                 <button id="download-button">Download</button>
+             </a>
             </div>
             <p class="files">Files will be downloaded to device</p>
         </div>
         <div class="G">
             <div class="share">
                 <h4>Share</h4>
-                <a href="#" id="all">View more</a>
                 </div>
                 <div class="link">
                     <p id="copy">Copy Link to clipboard</p>
@@ -210,4 +271,5 @@
     </main>
     <footer></footer>
 </body>
+<script src="{% static 'js/homepage.js' %}"></script>
 </html>

@@ -1,0 +1,35 @@
+{% extends "user/forget_password.html" %}
+
+
+{% block content_forget_pass %}
+
+<div class="layer">
+            <h1 style="color: #0353A4;">Reset your password</h1>
+            <br>
+            {% if validlink %}
+            <p>Please enter your new password twice:</p>
+            <form class="form-control" method='POST' id="form">
+                <div class="field">
+                    {% for form_ in form %}
+                    <br><br>
+                    <label>{{ form_.label }}</label>
+                    <br>
+                    {{ form_ }}
+                    <br><br>
+                    <small class='django-error'>{{ form_.errors }}</small>
+                    {% endfor %}
+                </div>
+                <br>
+                {% csrf_token %}
+                <button type="submit" >Change my password</button>
+            </form>
+        {% else %}
+        <p>The password reset link was invalid, possibly because it has
+        already been used. Please request a new password reset.</p>
+        {% endif %}
+</div>
+{% endblock content_forget_pass %}
+
+
+
+
