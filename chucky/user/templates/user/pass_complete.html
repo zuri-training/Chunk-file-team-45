@@ -1,0 +1,8 @@
+{% extends "user/forget_password.html" %}
+{% block content_forget_pass %}
+<div class="layer" style="color: #0353A4;">
+     <h1>Password set</h1>
+    <p style="color: #0353A4;">Your password has been set. You can
+    <a href='{% url "user:user-login" %}'>log in now</a></p>
+</div>
+{% endblock content_forget_pass %}

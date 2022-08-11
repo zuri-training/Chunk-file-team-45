@@ -1,0 +1,43 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block title %}
+{{ request.get_host }} | error page
+{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/error.css' %}">
+{% endblock css %}
+
+<main>
+    <div>
+        <div>
+        <h4 class="head">Ooops!</h4>
+        </div>
+        <div>
+        <h6 class="sub-head">We can't seem to find the page you're looking for.</h6>
+        </div>
+        <div class="error">
+        <h6 class="error-head"><strong> Error code: 404</strong></h6>
+        <p class="error-p">Here are some helpful limks instead</p>
+        </div>
+        <div class="links">
+        <a href="{% url 'shredit:index-page' %}">Home</a>
+        <a href="{% url 'shredit:dashboard' %}">Dashboard</a>
+        <a href="{% url 'shredit:docs' %}">Documentation</a>
+        <a href="{% url 'shredit:contact' %}">Contact Us</a>
+        </div>
+
+    </div>
+    <div class="error-image">
+        <img src="{% static 'images/amico.svg' %}" alt="error">
+    </div>
+</main>
+
+{% block content %}
+
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock js %}

@@ -1,0 +1,26 @@
+{% extends "user/forget_password.html" %}
+
+
+{% block content_forget_pass %}
+
+<div class="layer">
+    <h2 style="color: #0353A4;">Forgot password?</h2>
+    <br>
+    <p>We would send you a link to reset your password</p>
+    <br><br>
+
+    <form class="form-control" method='POST' id="form">
+        <div class="field">
+        <label>{{ form.email.label }}</label>
+        <br>
+        <br>
+        <input type="email" name='email' id='id_email' placeholder="Email address" required>
+        <small class='django-error'>{{ form.email.errors }}</small>
+        </div>
+        <br>
+        <br>
+        {% csrf_token %}
+        <button type="submit" >Reset your password</button>
+    </form>
+</div>
+{% endblock content_forget_pass %}

@@ -350,7 +350,7 @@ input[placeholder="Enter your password"] {
 }
 
 .bottom {
-  font-size: 12px;
+  font-size: 20px;
   position: relative;
   bottom: 20px;
 }
@@ -390,14 +390,10 @@ input[placeholder="Enter your password"] {
   margin-left: 18px;
 }
 
-.forgot {
-  /* margin-bottom: 12px; */
-  font-size: 12px;
-}
-
 .forgot a {
   text-decoration: none;
   color: #034c95;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 1430px) {
@@ -453,7 +449,6 @@ input[placeholder="Enter your password"] {
 .forgot a{
     text-decoration: none;
     color: #034C95;
-    padding-left: 15px;
 }
 
 
@@ -461,20 +456,19 @@ input[placeholder="Enter your password"] {
     .content{
         padding-left: 150px;
     }
-    .forgot a{
-
-    padding-left: 30px;
-}
+    /* .forgot a{
+padding-left: 30px;
+} */
 
 }
 @media only screen and (max-width:830px) {
     .content{
         padding: 20px;
     }
-    .forgot a{
+    /* .forgot a{
 
     padding-left: 30px;
-}
+} */
 }
 
 

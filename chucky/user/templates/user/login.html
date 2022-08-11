@@ -49,7 +49,7 @@
                 <input type="checkbox" name="checkbox" id="checkbox">
                 <label for="checkbox">Keep me logged in</label>
             </div>
-            <p class="forgot"><a href="#">Forgot password?</a></p> 
+            <p class="forgot"><a href="{% url 'user:password_reset' %}">Forgot password?</a></p> 
         </div>
         {% csrf_token %}
         <button type="submit" value="text" id="btn">Login</button> 

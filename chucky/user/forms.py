@@ -35,9 +35,6 @@ class UserCreateForm(forms.Form):
         if (len(password) < 8):
             raise ValidationError("password is too short")
 
-        if any(pass_char not in allowed_characters for pass_char in password):
-            raise ValidationError("password contains illegal characters")
-
         if not any(pass_char.isdigit() for pass_char in password):
             raise ValidationError("password must have at least one number")
 
@@ -48,10 +45,6 @@ class UserCreateForm(forms.Form):
         if not any(pass_char.islower() for pass_char in password):
             raise ValidationError(
                 "password must have at least one lowercase letter")
-
-        if not any(pass_char in string.punctuation for pass_char in password):
-            raise ValidationError(
-                "password must have at least one special character")
 
         return confirm_password
 
@@ -90,4 +83,3 @@ class UserLoginForm(forms.Form):
             )
 
         return username
-

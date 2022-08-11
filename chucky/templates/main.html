@@ -15,10 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
 
-
-
-</head>
-<body>
     <!-- -----------------HEADER-------------------- -->
     <header class="header">
         <nav class="nav">
@@ -26,10 +22,9 @@
                 <img src="{% static 'images/logo.svg' %}" alt="iota_logo">
                 <a href="{% url 'shredit:index-page' %}">iOTA</a>
             </div>
-            
             <div class="nav_links">
                 <div class="nav_link"><a href="{% url 'shredit:about' %}">About us</a></div>
-                <div class="nav_link"><a href="#">Documentation</a></div>
+                <div class="nav_link"><a href="{% url 'shredit:docs' %}">Documentation</a></div>
                 <div class="nav_link"><a href="{% url 'shredit:contact' %}">Contact us</a></div>
                 <div class="nav_link"><a href="#">Resources</a></div>
             </div>
@@ -52,7 +47,7 @@
             <!--RESPONSIVE NAV-->
         <div class="responsive">
             <div><a href="{% url 'shredit:about' %}">About us</a></div>
-            <div><a href="#">Documentation</a></div>
+            <div><a href="{% url 'shredit:docs' %}">Documentation</a></div>
             <div><a href="{% url 'shredit:contact' %}">Contact us</a></div>
             <div><a href="#">Resources</a></div>
             {% if not user.is_authenticated %}
@@ -87,16 +82,16 @@
 
             <div class="footer_developers">
                 <div class="footer-title">Developers</div>
-                <div class="footer-child"><a href="#">Documentations</a></div>
+                <div class="footer-child"><a href="{% url 'shredit:docs' %}">Documentations</a></div>
                 <div class="footer-child"><a href="#">APIs</a></div>
             </div>
 
             <div class="footer_developers">
                 <div class="footer-title">Resources</div>
                 <div class="footer-child footer-letter">How to</div>
-                <div class="footer-child"><a href="#">Split a large Json file</a></div>
+                <div class="footer-child"><a href="{% url 'user:user-login' %}">Split a large Json file</a></div>
                 <div class="footer-child"><a href="#">Deleting duplicates from csv file</a></div>
-                <div class="footer-child last"><a href="#">CSV and Json spliter</a></div>
+                <div class="footer-child last"><a href="{% url 'user:user-login' %}">CSV and Json spliter</a></div>
             </div>
         </div>
 
