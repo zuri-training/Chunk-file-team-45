@@ -172,12 +172,12 @@
                     <div class="chunk">
                         <div>
                             <label for="chunk-size">Split by number of chunks</label>
-                            <input type="radio" id="chunk-size" name="split" value="chunk-size">
+                            <input type="radio" id="chunk-size" name="split" value="chunk-size" onclick="disableInput()" checked="checked">
                         </div>
 
                         <div>
                             <label for="split">Split by chunk size</label>
-                            <input type="radio" id="split" name="split" value="split" checked>
+                            <input type="radio" id="split" name="split" value="split" onclick="disableInput()">
                         </div>
                         
                         
@@ -189,7 +189,7 @@
                             <div class="inner-div">
                                 <input type="number" placeholder="Input value" id="chunk" class="one">
                                 <select name="chunking-options" id="chun">
-                                    <option disabled selected>Size</option>
+                                    <option disabled selected >Size</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
