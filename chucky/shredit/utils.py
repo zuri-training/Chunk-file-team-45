@@ -41,7 +41,7 @@ class Shredding:
             csv file.
         """
 
-        with open(filepath, mode='r', newline='') as shred_file:
+        with open(filepath, mode='r', encoding='windows-1252', newline='') as shred_file:
             reader = csv.DictReader(shred_file)
             shredit = Shredding.yield_rows(reader, int(rows_num))
 
