@@ -48,4 +48,4 @@ https://www.figma.com/file/u1asikejW1s1pF9NU51pPd/FIGMA---Chunk-file%2FTEAM-45?n
 
 
 ## Database Schema
-<img src="/chucky-ERD.png" height=500>  
+<img src="iOTA.png" height=500>  
