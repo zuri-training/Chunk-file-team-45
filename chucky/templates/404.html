@@ -1,13 +1,22 @@
-{% extends "main.html" %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block title %}
-{{ request.get_host }} | error page
-{% endblock title %}
+<title>{{ request.get_host }} | error page</title>
+<link rel="stylesheet" href="{% static 'css/404.css' %}">
 
-{% block css %}
-    <link rel="stylesheet" href="{% static 'css/error.css' %}">
-{% endblock css %}
+<!-- -----------------GOOGLE FONT LINKS--------------------------- -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- -----------------HEADER-------------------- -->
+    {% include 'navbar.html' %}
 
 <main>
     <div>
@@ -33,11 +42,7 @@
         <img src="{% static 'images/amico.svg' %}" alt="error">
     </div>
 </main>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
 
-{% block content %}
-
-{% endblock content %}
-
-{% block js %}
-<script src="{% static 'js/index.js' %}"></script>
-{% endblock js %}
