@@ -94,7 +94,7 @@
                     <div class="sec-A">
 
                     <img src="{% static 'images/message-question.svg' %}" class="li">
-                   <a href="#">Help centre</a>
+                   <a href="{% url 'shredit:contact' %}">Help centre</a>
                     </div>
                     </li>
                     <li  id="sec-A">
@@ -162,12 +162,12 @@
                     <div class="chunk">
                         <div>
                             <label for="chunk-size">Split by number of chunks</label>
-                            <input type="radio" id="chunk-size" name="split" value="chunk-size">
+                            <input type="radio" id="chunk-size" name="split" value="chunk-size" onclick="disableInput()" checked="checked">
                         </div>
 
                         <div>
                             <label for="split">Split by chunk size</label>
-                            <input type="radio" id="split" name="split" value="split" checked>
+                            <input type="radio" id="split" name="split" value="split" onclick="disableInput()">
                         </div>
                         
                         
@@ -223,9 +223,7 @@
                         <p class="when">{{ activity.updated  }}</p>
                     </li>
                     {% empty %}
-                    <li class="l2">
-                        <p class="when">Opps! you are yet to chunk some files</p>
-                    </l>
+                    <p style="color: #034C95">Opps! you are yet to chunk some files</p>
                     {% endfor %}
                 </ul>
                 <div class="view">
@@ -237,7 +235,9 @@
                 <h4>Download</h4>
             </div>
             <div class="download-button">
+            {% if resent_file %}
              <a href="{% url 'shredit:download' resent_file.id %}">
+             {% endif %}
                  <button id="download-button">Download</button>
              </a>
             </div>
@@ -249,7 +249,11 @@
                 </div>
                 <div class="link">
                     <p id="copy">Copy Link to clipboard</p>
-                    <a href="#"id="link"><b>www.shredit.net/G9w7qp0</b></a>
+                    {% if resent_file %}
+                    <a href="{% url 'shredit:share' %}"id="link"><b>{{ resent_file.chucked_file.url }}</b></a>
+                    {% else %}
+                    <p style="color: #034C95">Chunk some files to share :)</p>
+                    {% endif %}
                 </div>
         </div>
         <div class="I"><hr></div>

@@ -1,4 +1,6 @@
 from django.core.files.storage import FileSystemStorage
+from django.core.files.uploadedfile import UploadedFile
+from .models import Shredit
 from django.conf import settings
 from os.path import basename
 from zipfile import ZipFile
@@ -92,13 +94,12 @@ class Shredding:
         zipped_file_path = os.path.join(
             settings.MEDIA_ROOT, f'{filename}-zippedfile.zip')
         try:
-            with ZipFile(zipped_file_path, 'w') as zip_shred:
-                # Iterate over all the files in directory
-                for root, directories, files in os.walk(directory):
-                    for filename in files:
-                        file_path = os.path.join(root, filename)
-                        zip_shred.write(file_path, basename(file_path))
-
+            zip_shred = ZipFile(zipped_file_path, 'w')
+            # Iterate over all the files in directory
+            for root, directories, files in os.walk(directory):
+                for filename in files:
+                    file_path = os.path.join(root, filename)
+                    zip_shred.write(file_path, basename(file_path))
         except:
             return None
         return os.path.abspath(zipped_file_path)
@@ -116,25 +117,11 @@ class Shredding:
         if file.name.split('.')[-1] == 'csv':
             if Shredding.shreding_csv_file(file_path, chunk_num, file.name):
                 if zip_it := Shredding.zip_it(file.name):
-                    # storage_url = Shredding.storage(zip_it, file.name)
                     shutil.rmtree(os.path.join(settings.MEDIA_ROOT, file.name))
                     return zip_it
 
         if file.name.split('.')[-1] == 'json':
             if Shredding.shreding_json_file(file_path, chunk_num, file.name):
                 if zip_it := Shredding.zip_it(file.name):
-                    storage_url = Shredding.storage(zip_it, file.name)
                     shutil.rmtree(os.path.join(settings.MEDIA_ROOT, file.name))
                     return zip_it
-
-    # @staticmethod
-    # def storage(path, filename):
-    #     print(path)
-    #     zip_file = ZipFile(path, mode='r')
-
-    #     storage = FileSystemStorage(location=os.path.join(
-    #         settings.MEDIA_ROOT, 'zipped_files'))
-    #     storage = storage.save(filename, zip_file).url
-    #     zip_file.close()
-    #     print(storage)
-    #     return storage

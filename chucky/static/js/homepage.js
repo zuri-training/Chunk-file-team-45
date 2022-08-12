@@ -14,3 +14,20 @@ menuBtn.addEventListener("click", () => {
     menuRespond.classList.remove("responsiveBlock");
   }
 })
+
+const sizeRadio = document.getElementById("split");
+const sizeInput = document.querySelector(".two");
+const chunk = document.querySelector(".one");
+sizeInput.disabled = true
+
+
+
+function disableInput() {
+  if (sizeRadio.checked) {
+    chunk.disabled = true;
+    sizeInput.disabled = false;
+  } else {
+    sizeInput.disabled = true;
+    chunk.disabled = false;
+  }
+}

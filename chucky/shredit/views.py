@@ -1,6 +1,7 @@
-from .forms import ContactForm, UploadForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from .forms import ContactForm, UploadForm
+from django.http import HttpResponse
 from django.contrib import messages
 from django.http import Http404
 from .utils import Shredding
@@ -27,9 +28,13 @@ def home(request):
             size_type = upload_form.cleaned_data.get('size_type')
 
             proccessed_file = Shredding.processing_file(
-                request, file, chunk_num, size_type)
+                request,
+                file,
+                chunk_num,
+                size_type
+            )
             if proccessed_file:
-                ins = Shredit.objects.create(
+                Shredit.objects.create(
                     owner=request.user,
                     _file_name=file.name,
                     chucked_file=proccessed_file,
@@ -59,6 +64,22 @@ def download(request, id=None):
     context = {'file_ins': file_ins}
 
     return render(request, 'shredit/download.html', context)
+
+
+@login_required(login_url='/author/login/')
+def download_file(request, id=None):
+    try:
+        file_ins = Shredit.objects.get(id=id)
+        fl_path = file_ins.chucked_file.path
+        filename = file_ins.chucked_file.name
+
+        zip_file = open(fl_path, 'rb')
+        response = HttpResponse(
+            zip_file, content_type='application/force-download')
+        response['Content-Disposition'] = 'attachment; filename="%s"' % filename
+        return response
+    except:
+        raise Http404
 
 
 def about_us(request):

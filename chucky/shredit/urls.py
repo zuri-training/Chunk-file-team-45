@@ -11,5 +11,7 @@ urlpatterns = [
     path("contact/", views.contact_us, name='contact'),
     path("documentation/", views.docs_page, name='docs'),
     path("download/<int:id>/", views.download, name='download'),
-    path("share/", views.share_page, name='share')
+    path("share/", views.share_page, name='share'),
+    path('downloading/file/<int:id>/', views.download_file, name='down_load'),
+
 ]

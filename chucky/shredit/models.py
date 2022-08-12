@@ -15,7 +15,7 @@ class Shredit(models.Model):
     owner = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='users_file')
     _file_name = models.CharField(max_length=100, blank=True, null=True)
-    chucked_file = models.FileField(upload_to='zipped/%Y/%m/%d/')
+    chucked_file = models.FileField(upload_to='zipped')
     _file_size = models.PositiveSmallIntegerField(default=0)
     _file_url = models.URLField()
     size_type = models.CharField(
@@ -51,4 +51,9 @@ class Shredit(models.Model):
 
     @property
     def file_url(self):
-        pass
+        _url = self.chucked_file.url
+        if _url:
+            self._file_url = _url
+            self.save()
+            return _url
+        return ''
