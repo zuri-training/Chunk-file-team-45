@@ -8,6 +8,7 @@
   <li> Designed the Error page using HTML, CSS and JavaScripts. https://github.com/zuri-training/Chunk-file-team-45/issues/51</li>
   <li> Login Validation with javascipts https://github.com/zuri-training/Chunk-file-team-45/commit/19e1c290fe5da3a679a1b2a4ad98832dee482a13</li>
   <li> Worked along with Isiah to implement the spliting functionality. https://github.com/zuri-training/Chunk-file-team-45/issues/79</li>
+  <li> Fixed the radio button on the dashboard to only allow one input field at a time using Javascripts https://github.com/zuri-training/Chunk-file-team-45/issues/82</li>
 </ol>
 <h2>Other Contributions</h2>
 <li>Maintaining the team repository and merging of pull requests</li>
