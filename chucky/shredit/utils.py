@@ -88,10 +88,9 @@ class Shredding:
 
     @staticmethod
     def zip_it(filename):
-        filename = filename.split(".")[0]
         directory = os.path.join(settings.MEDIA_ROOT, filename)
         zipped_file_path = os.path.join(
-            settings.MEDIA_ROOT, f'{filename}.zip')
+            settings.MEDIA_ROOT, f'{filename.split(".")[0]}.zip')
         try:
             zip_shred = ZipFile(zipped_file_path, 'w')
             # Iterate over all the files in directory
