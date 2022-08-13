@@ -1,6 +1,4 @@
 from django.core.files.storage import FileSystemStorage
-from django.core.files.uploadedfile import UploadedFile
-from .models import Shredit
 from django.conf import settings
 from os.path import basename
 from zipfile import ZipFile
@@ -51,7 +49,7 @@ class Shredding:
             for counter, shred in enumerate(shredit, start=1):
                 with open(
                     os.path.join(
-                        settings.MEDIA_ROOT, filename, f'{filename}-{counter}'
+                        settings.MEDIA_ROOT, filename, f'{counter}-{filename}'
                     ),
                         mode='w', newline='') as shreded_file:
                     try:
@@ -90,15 +88,16 @@ class Shredding:
 
     @staticmethod
     def zip_it(filename):
+        filename = filename.split(".")[0]
         directory = os.path.join(settings.MEDIA_ROOT, filename)
         zipped_file_path = os.path.join(
-            settings.MEDIA_ROOT, f'{filename}-zippedfile.zip')
+            settings.MEDIA_ROOT, f'{filename}.zip')
         try:
             zip_shred = ZipFile(zipped_file_path, 'w')
             # Iterate over all the files in directory
             for root, directories, files in os.walk(directory):
-                for filename in files:
-                    file_path = os.path.join(root, filename)
+                for filename_ in files:
+                    file_path = os.path.join(root, filename_)
                     zip_shred.write(file_path, basename(file_path))
         except:
             return None

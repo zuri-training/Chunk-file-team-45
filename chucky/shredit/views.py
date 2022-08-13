@@ -58,6 +58,8 @@ def home(request):
 def download(request, id=None):
     try:
         file_ins = Shredit.objects.get(id=id)
+        if request.user != file_ins.owner:
+            raise Http404
     except Shredit.DoesNotExist:
         raise Http404
 
@@ -72,7 +74,8 @@ def download_file(request, id=None):
         file_ins = Shredit.objects.get(id=id)
         fl_path = file_ins.chucked_file.path
         filename = file_ins.chucked_file.name
-
+        if request.user != file_ins.owner:
+            raise Http404
         zip_file = open(fl_path, 'rb')
         response = HttpResponse(
             zip_file, content_type='application/force-download')
