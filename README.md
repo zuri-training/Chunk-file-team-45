@@ -1,14 +1,14 @@
 ## DEPLOYMENT GUIDE
-​> Main branch location -[iOTA-main-branch](https://github.com/zuri-training/Chunk-file-team-45)
+​-Main branch location -[iOTA-main-branch](https://github.com/zuri-training/Chunk-file-team-45)
 
 Clone the project
 ```
-  git clone https://github.com/zuri-training/Chunk-file-team-45.git
+git clone https://github.com/zuri-training/Chunk-file-team-45.git
 ```
 ​
 Browse to the project folder
 ```
-  cd Chunk-file-team-45
+cd Chunk-file-team-45
 ```
 ​
 Create a virtual environment 
@@ -29,7 +29,7 @@ cd chucky
 
 Install all dependencies
 ```
-  pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 ​
 Make migrations
