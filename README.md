@@ -126,5 +126,18 @@ https://www.figma.com/file/u1asikejW1s1pF9NU51pPd/FIGMA---Chunk-file%2FTEAM-45?n
 # Database Schema
 <img src="iOTA.png" height=500> 
 
-# iOTA Page
+
+># iOTA Page
 <img src="landing.png">
+
+
+> # About Page
+<img src="about.png">
+
+
+> # Docs Page
+<img src="docs.png">
+
+
+>
+<img src="footer.png">
