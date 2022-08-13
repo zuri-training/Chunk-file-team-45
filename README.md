@@ -1,3 +1,68 @@
+## DEPLOYMENT GUIDE
+​> Main branch location -[iOTA-main-branch](https://github.com/zuri-training/Chunk-file-team-45)
+
+Clone the project
+```
+  git clone https://github.com/zuri-training/Chunk-file-team-45.git
+```
+​
+Browse to the project folder
+```
+  cd Chunk-file-team-45
+```
+​
+Create a virtual environment 
+```
+python -m venv chunky_env
+```
+​
+Activate virtual environment
+```
+cd chunky_env\Scripts
+activate
+```
+
+Move to project directory under Chunk-file-team-45 dir run​
+```
+cd chucky
+```
+
+Install all dependencies
+```
+  pip install -r requirements.txt
+```
+​
+Make migrations
+```
+python manage.py makemigrations
+```
+​
+Migrate the database
+```
+python manage.py migrate
+```
+​
+create superuser 
+```
+python manage.py createsuperuser
+```
+​
+Create a new branch to work with
+```
+git branch <new-branch>
+```
+​
+switch to the new branch to make changes
+```
+git checkout <new-branch>
+```
+​
+Finally, Start The Server.
+```
+python manage.py runserver
+```
+
+
 # Chunk-file-team-45
 
 This platform was concieved to help people get a better hold of large data processing.
