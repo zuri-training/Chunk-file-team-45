@@ -128,4 +128,3 @@ https://www.figma.com/file/u1asikejW1s1pF9NU51pPd/FIGMA---Chunk-file%2FTEAM-45?n
 
 # iOTA Page
 <img src="landing.png">
-
