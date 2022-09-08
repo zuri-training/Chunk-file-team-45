@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-boeo04c$y2xpd&5-txe8l4a3+u5=-gm1txor7ii$pl9*gqhfs$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -126,8 +126,11 @@ USE_TZ = True
 
 # ]
 
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
+
+
 
 MEDIA_URL = 'uploads/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -153,3 +156,22 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_HOST_USER= config('EMAIL_HOST_USER')
 # EMAIL_HOST_PASSWORD= config('EMAIL_HOST_PASSWORD')
 # RECIPIENT_ADDRESS=config('RECIPIENT_ADDRESS')
+
+# for production mode
+if config('PROD') == 'YES':
+    DEBUG = False
+    ALLOWED_HOSTS = ['iota.pythonanywhere.com']
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':config('NAME'),
+        'USER': config('USER'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        }
+    }
+    STATIC_URL = '/static/'
+    STATIC_ROOT = '/home/iota/Chunk-file-team-45/chucky/static'
+    MEDIA_URL = '/files/'
+    MEDIA_ROOT = '/home/iota/'
+
