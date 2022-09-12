@@ -32,7 +32,11 @@
                 <h3>Welcome to Iota</h3>
                 <p class="create-account">Create An Account</p>
                 
-                <button class="google-sign-up"><img src="{% static 'images/google_logo.svg' %}"> Sign Up with Google !</button>
+                <a href="{% url 'social:begin' 'google-oauth2' %}">
+                    <button class="google-sign-up">
+                        <img src="{% static 'images/google_logo.svg' %}">oogle
+                    </button>
+                </a>
             </div>
             
             <div class="form">
