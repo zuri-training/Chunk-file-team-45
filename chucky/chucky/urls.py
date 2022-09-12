@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('shredit.urls', namespace='shredit')),
     path('author/', include('user.urls', namespace='user')),
+    path('social-auth/',include('social_django.urls', namespace='social')),
 ]
 
 handler404 = "shredit.views.page_404"
