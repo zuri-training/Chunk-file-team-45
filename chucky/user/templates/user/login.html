@@ -20,10 +20,13 @@
 <br><br>
 <section class="layer">
 <div class="content">
-    <h4>Welcome Back</h4><br>
+    <h4>Welcome Back</h4>
+    <br>
+    <a href="{% url 'social:begin' 'google-oauth2' %}">
     <button id="click" type="button" value="text">
-        <img src="{% static 'images/google-removebg-preview.png' %}" class="option">Log in with Google
+        <img src="{% static 'images/google-removebg-preview.png' %}" class="option">Login with Google
     </button>
+    </a>
     <br>
     <br>
 

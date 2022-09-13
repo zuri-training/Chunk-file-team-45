@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-boeo04c$y2xpd&5-txe8l4a3+u5=-gm1txor7ii$pl9*gqhfs$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['mysite.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'user.apps.UserConfig',
     'shredit.apps.ShreditConfig',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -105,6 +108,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = config('GOOGLE_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config('GOOGLE_SECRET')
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
@@ -121,13 +131,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'static',
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
 
-# ]
-
+]
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+
+
+
 
 MEDIA_URL = 'uploads/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -153,3 +164,22 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_HOST_USER= config('EMAIL_HOST_USER')
 # EMAIL_HOST_PASSWORD= config('EMAIL_HOST_PASSWORD')
 # RECIPIENT_ADDRESS=config('RECIPIENT_ADDRESS')
+
+# for production mode
+if config('PROD') == 'YES':
+    DEBUG = False
+    ALLOWED_HOSTS = ['iota.pythonanywhere.com']
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':config('NAME'),
+        'USER': config('USER'),
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        }
+    }
+    STATIC_URL = '/static/'
+    STATIC_ROOT = '/home/iota/Chunk-file-team-45/chucky/static'
+    MEDIA_URL = '/files/'
+    MEDIA_ROOT = '/home/iota/'
+

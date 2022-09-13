@@ -64,6 +64,8 @@ db.sqlite3-journal
 
 # Environments
 chucky_env
+.env
 
 # media
 media
+iOTA-asserts
